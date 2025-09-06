@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrismApp1.Views.NoteEditorPage"
+             Title="NoteEditorPage">
+  <VerticalStackLayout Padding="20" Spacing="15">
+    <Entry Placeholder="عنوان نوت" Text="{Binding Title}" />
+    <Editor Placeholder="متن نوت" HeightRequest="150" Text="{Binding Content}" />
+    <Button Text="ذخیره"
+            Command="{Binding SaveNoteCommand}" />
+  </VerticalStackLayout>
+
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+<PropertyGroup><TargetFrameworks>net9.0-android;net9.0-ios;net9.0-maccatalyst</TargetFrameworks><TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net9.0-windows10.0.19041.0</TargetFrameworks><OutputType>Exe</OutputType><RootNamespace>PrismApp1</RootNamespace><UseMaui>true</UseMaui><SingleProject>true</SingleProject><ImplicitUsings>enable</ImplicitUsings><SkipValidateMauiImplicitPackageReferences>true</SkipValidateMauiImplicitPackageReferences>
+<ApplicationTitle>PrismApp1</ApplicationTitle>
+<ApplicationId>com.companyname.prismapp1</ApplicationId>
+<ApplicationIdGuid>a43aa7e0-50e1-49cb-b42f-93192441e8d6</ApplicationIdGuid>
+
+<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+<ApplicationVersion>1</ApplicationVersion>
+
+<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
+<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+<ApplicationTitle>PrismApp1</ApplicationTitle>
+<ApplicationId>com.companyname.prismapp1</ApplicationId>
+<ApplicationIdGuid>a43aa7e0-50e1-49cb-b42f-93192441e8d6</ApplicationIdGuid>
+
+<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+<ApplicationVersion>1</ApplicationVersion>
+
+<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
+<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+</PropertyGroup>
+<ItemGroup><MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#FFFFFF" /><MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#FFFFFF" /><MauiImage Include="Resources\Images\*" /><MauiFont Include="Resources\Fonts\*" /><MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" /></ItemGroup>
+<ItemGroup><PackageReference Include="CommunityToolkit.Maui" Version="12.1.0" /><PackageReference Include="Microsoft.Maui.Controls" Version="9.0.90" /><PackageReference Include="Prism.DryIoc.Maui" Version="8.1.191-beta" /></ItemGroup>
+<ItemGroup><ProjectReference Include="..\..\DataBase\DataBase.csproj" /></ItemGroup>
+<ItemGroup><Compile Update="Views\NoteEditorPage.xaml.cs"><DependentUpon>NoteEditorPage.xaml</DependentUpon></Compile></ItemGroup>
+<ItemGroup><MauiXaml Update="Views\NoteEditorPage.xaml"><Generator>MSBuild:Compile</Generator></MauiXaml></ItemGroup>
+</Project>

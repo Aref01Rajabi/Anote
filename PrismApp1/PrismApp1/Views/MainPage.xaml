@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrismApp1.Views.MainPage"
+             x:Name="MainPageRoot"
+             xmlns:converters="clr-namespace:PrismApp1.Converters"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="یادداشت‌ها">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <converters:InverseBoolConverter x:Key="InverseBoolConverter" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <Grid Padding="5">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="15*"/>
+    </Grid.RowDefinitions>
+    
+    <!-- menubar -->
+    <Grid  Grid.Row="0">
+
+      
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+
+      <HorizontalStackLayout Grid.Column="0" HorizontalOptions="End" Margin="0,5,0,5" Spacing="5">
+        <ImageButton Source="menu.xaml.png"
+           BackgroundColor="Transparent"
+           BorderColor="Transparent"/>
+      </HorizontalStackLayout>
+
+
+      <HorizontalStackLayout Grid.Column="1" HorizontalOptions="End" Margin="0,5,0,5" Spacing="5">
+        <ImageButton Source="delete_key.xaml.png"
+             IsVisible="{Binding HasSelection}"
+             Command="{Binding DeleteSelectedCommand}"
+             BackgroundColor="Transparent"
+             BorderColor="Transparent"
+                     />
+        <ImageButton Source="search.xaml.png"
+               BackgroundColor="Transparent"
+               BorderColor="Transparent" />
+
+        <ImageButton Source="add.xaml.png"
+               BackgroundColor="Transparent"
+               BorderColor="Transparent"
+               IsVisible="{Binding IsNoteSelected, Converter={StaticResource InverseBoolConverter}}"
+               Command="{Binding AddNoteCommand}" />
+        <ImageButton Source="addfolder.xaml.png"
+               BackgroundColor="Transparent"
+               BorderColor="Transparent"
+               IsVisible="{Binding IsNoteSelected, Converter={StaticResource InverseBoolConverter}}" />
+
+        
+      </HorizontalStackLayout>
+
+      
+    </Grid>
+
+
+    <CollectionView Grid.Row="1" ItemsSource="{Binding Notes}">
+      <CollectionView.ItemTemplate>
+        <DataTemplate>
+          <Frame BackgroundColor="Transparent"
+                 BorderColor="Gray" CornerRadius="8" Padding="10" Margin="5">
+            <Frame.GestureRecognizers>
+              <TapGestureRecognizer
+                                    Command="{Binding Source={x:Reference MainPageRoot}, Path=BindingContext.EditNoteCommand}"
+                                    CommandParameter="{Binding .}" />
+            </Frame.GestureRecognizers>
+
+            <VerticalStackLayout>
+              <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="18"/>
+              <Label Text="{Binding CreatedAt, StringFormat='{0:yyyy/MM/dd HH:mm}'}"
+                     FontSize="12" TextColor="DarkGray" />
+            </VerticalStackLayout>
+          </Frame>
+        </DataTemplate>
+      </CollectionView.ItemTemplate>
+    </CollectionView>
+
+
+  </Grid>
+ 
+
+</ContentPage>

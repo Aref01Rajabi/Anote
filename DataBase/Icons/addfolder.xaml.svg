@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" width="100" height="100">
+  <defs>
+    <!-- ماسکی که ناحیه دایره را شفاف می‌کند (سفید = نشان دادن، سیاه = مخفی کردن) -->
+    <mask id="cutout">
+      <rect x="0" y="0" width="24" height="24" fill="white"/>
+      <circle cx="17.5" cy="17.5" r="4.5" fill="black"/>
+    </mask>
+  </defs>
+
+  <!-- گروه فولدر که ماسک روی آن اعمال می‌شود تا خطوط داخل دایره بریده شوند -->
+  <g mask="url(#cutout)" stroke="#2BFFF1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M4 6a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v7
+             M4 6v10a2 2 0 0 0 2 2h8"/>
+  </g>
+
+  <!-- دایره و علامت پلاس روی سطح قرار می‌گیرند -->
+  <circle cx="17.5" cy="17.5" r="4.5" fill="none" stroke="#2BFFF1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M17.5 15.5v4M15.5 17.5h4" stroke="#2BFFF1" stroke-width="1" stroke-linecap="round"/>
+</svg>
+
