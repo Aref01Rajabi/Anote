@@ -14,6 +14,7 @@ namespace PrismApp1.ViewModels
         public ObservableCollection<NoteModel> Notes { get; } = new();
         public DelegateCommand AddNoteCommand { get; }
         public DelegateCommand DeleteSelectedCommand { get; }
+        public DelegateCommand<Button> ChoosNoteCommand { get; }
         public DelegateCommand<NoteModel?> EditNoteCommand { get; }
 
 
@@ -24,8 +25,23 @@ namespace PrismApp1.ViewModels
             AddNoteCommand = new DelegateCommand(GoToNoteEditor);
             DeleteSelectedCommand = new DelegateCommand(DeleteSelectedNotes);
             EditNoteCommand = new DelegateCommand<NoteModel?>(GoToEditNote);
+            ChoosNoteCommand = new DelegateCommand<Button>(ChoosNote);
         }
-        
+
+        private void ChoosNote(Button button)
+        {
+            
+                if (button == null) return;
+
+                var currentColor = button.BackgroundColor;
+
+                var targetColor = Color.FromArgb("#2BFFF1");
+
+                button.BackgroundColor = currentColor == Colors.Transparent
+                    ? targetColor
+                    : Colors.Transparent;
+
+        }
 
         private async void GoToNoteEditor()
         {

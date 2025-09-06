@@ -6,11 +6,7 @@
              xmlns:converters="clr-namespace:PrismApp1.Converters"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              Title="یادداشت‌ها">
-  <ContentPage.Resources>
-    <ResourceDictionary>
-      <converters:InverseBoolConverter x:Key="InverseBoolConverter" />
-    </ResourceDictionary>
-  </ContentPage.Resources>
+
 
   <Grid Padding="5">
     <Grid.RowDefinitions>
@@ -48,12 +44,10 @@
         <ImageButton Source="add.xaml.png"
                BackgroundColor="Transparent"
                BorderColor="Transparent"
-               IsVisible="{Binding IsNoteSelected, Converter={StaticResource InverseBoolConverter}}"
                Command="{Binding AddNoteCommand}" />
         <ImageButton Source="addfolder.xaml.png"
                BackgroundColor="Transparent"
-               BorderColor="Transparent"
-               IsVisible="{Binding IsNoteSelected, Converter={StaticResource InverseBoolConverter}}" />
+               BorderColor="Transparent" />
 
         
       </HorizontalStackLayout>
@@ -73,11 +67,33 @@
                                     CommandParameter="{Binding .}" />
             </Frame.GestureRecognizers>
 
-            <VerticalStackLayout>
-              <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="18"/>
-              <Label Text="{Binding CreatedAt, StringFormat='{0:yyyy/MM/dd HH:mm}'}"
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+              </Grid.ColumnDefinitions>
+
+              
+              <VerticalStackLayout Grid.Column="0">
+                <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="18"/>
+                <Label Text="{Binding CreatedAt, StringFormat='{0:yyyy/MM/dd HH:mm}'}"
                      FontSize="12" TextColor="DarkGray" />
-            </VerticalStackLayout>
+              </VerticalStackLayout>
+              <Button x:Name="NoteButton"
+                      Grid.Column="1"
+                      WidthRequest="24"
+                      HeightRequest="24"
+                      CornerRadius="12"
+                      BorderColor="Gray"
+                      BorderWidth="1"
+                      BackgroundColor="Transparent"
+                      Margin="2"
+                      HorizontalOptions="End"
+                      VerticalOptions="Center"
+                      Command="{Binding Source={x:Reference MainPageRoot}, Path=BindingContext.ChoosNoteCommand}"
+                      CommandParameter="{x:Reference NoteButton}"/>
+
+            </Grid>
           </Frame>
         </DataTemplate>
       </CollectionView.ItemTemplate>

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\IOS\\Desktop\\Anote\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{08B75981-3B26-4202-9979-9E0D58AFA7E7}|PrismApp1\\PrismApp1\\Anote.csproj|c:\\users\\ios\\desktop\\anote\\prismapp1\\prismapp1\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{08B75981-3B26-4202-9979-9E0D58AFA7E7}|PrismApp1\\PrismApp1\\Anote.csproj|solutionrelative:prismapp1\\prismapp1\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{08B75981-3B26-4202-9979-9E0D58AFA7E7}|PrismApp1\\PrismApp1\\Anote.csproj|c:\\users\\ios\\desktop\\anote\\prismapp1\\prismapp1\\viewmodels\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{08B75981-3B26-4202-9979-9E0D58AFA7E7}|PrismApp1\\PrismApp1\\Anote.csproj|solutionrelative:prismapp1\\prismapp1\\viewmodels\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08B75981-3B26-4202-9979-9E0D58AFA7E7}|PrismApp1\\PrismApp1\\Anote.csproj|c:\\users\\ios\\desktop\\anote\\prismapp1\\prismapp1\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{08B75981-3B26-4202-9979-9E0D58AFA7E7}|PrismApp1\\PrismApp1\\Anote.csproj|solutionrelative:prismapp1\\prismapp1\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,31 +41,27 @@
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\IOS\\Desktop\\Anote\\PrismApp1\\PrismApp1\\Views\\MainPage.xaml",
               "RelativeDocumentMoniker": "PrismApp1\\PrismApp1\\Views\\MainPage.xaml",
               "ToolTip": "C:\\Users\\IOS\\Desktop\\Anote\\PrismApp1\\PrismApp1\\Views\\MainPage.xaml",
               "RelativeToolTip": "PrismApp1\\PrismApp1\\Views\\MainPage.xaml",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAQwEwAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwD0AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-09-06T12:06:35.684Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainPageViewModel.cs",
               "DocumentMoniker": "C:\\Users\\IOS\\Desktop\\Anote\\PrismApp1\\PrismApp1\\ViewModels\\MainPageViewModel.cs",
               "RelativeDocumentMoniker": "PrismApp1\\PrismApp1\\ViewModels\\MainPageViewModel.cs",
               "ToolTip": "C:\\Users\\IOS\\Desktop\\Anote\\PrismApp1\\PrismApp1\\ViewModels\\MainPageViewModel.cs",
               "RelativeToolTip": "PrismApp1\\PrismApp1\\ViewModels\\MainPageViewModel.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAwwEYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAA9wCsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-06T05:12:31.23Z",
               "EditorCaption": ""
