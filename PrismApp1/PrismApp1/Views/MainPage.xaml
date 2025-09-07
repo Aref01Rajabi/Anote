@@ -37,12 +37,18 @@
 
 
       <HorizontalStackLayout Grid.Column="1" HorizontalOptions="End" Margin="0,5,0,5" Spacing="5">
+        <ImageButton Source="back.xaml.png"
+             IsVisible="{Binding SelectionMode}"
+             Command="{Binding UndoSelectionModeCommand}"
+             BackgroundColor="Transparent"
+             BorderColor="Transparent"/>
+
         <ImageButton Source="delete_key.xaml.png"
              IsVisible="{Binding SelectionMode}"
              Command="{Binding DeleteSelectedCommand}"
              BackgroundColor="Transparent"
              BorderColor="Transparent"/>
-
+        
         <ImageButton Source="search.xaml.png"
                BackgroundColor="Transparent"
                BorderColor="Transparent"/>
@@ -89,43 +95,46 @@
     </Grid>
 
     <!--Notes-->
-    <CollectionView Grid.Row="1" ItemsSource="{Binding Notes}" >
+    <CollectionView Grid.Row="1" ItemsSource="{Binding Notes}">
       <CollectionView.ItemTemplate>
         <DataTemplate>
-          <Frame x:Name="ItemFrame" Grid.Column="0" BackgroundColor="Transparent"
-                 BorderColor="Gray" CornerRadius="8" Padding="10" Margin="5">
-            <Frame.GestureRecognizers>
-              <TapGestureRecognizer
-                                    Command="{Binding Source={x:Reference MainPageRoot}, Path=BindingContext.ClickNoteCommand}"
-                                    CommandParameter="{Binding .}" />
-            </Frame.GestureRecognizers>
-            <Frame.Behaviors>
-              <toolkit:TouchBehavior
-                                      LongPressCommand="{Binding Source={x:Reference MainPageRoot}, Path=BindingContext.LongPressCommand}"
-                                      LongPressCommandParameter="{Binding BindingContext, Source={x:Reference ItemFrame}}"
-                                      LongPressDuration="380"/>
-            </Frame.Behaviors>
+          <VerticalStackLayout>
 
-
-              
-              <HorizontalStackLayout Spacing="-90">
-              <CheckBox IsVisible="{Binding Source={x:Reference MainPageRoot}, Path=BindingContext.SelectionMode}"
-                              IsChecked="{Binding IsSelected, Mode=TwoWay}">
-                <CheckBox.Triggers>
-                  <DataTrigger TargetType="CheckBox" Binding="{Binding IsSelected}" Value="True">
-                    <Setter Property="BackgroundColor" Value="#384747"/>
-                  </DataTrigger>
-                  <DataTrigger TargetType="CheckBox" Binding="{Binding IsSelected}" Value="False">
-                    <Setter Property="BackgroundColor" Value="Transparent"/>
-                  </DataTrigger>
-                </CheckBox.Triggers>
-              </CheckBox>
-              <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="18"/>
-            </HorizontalStackLayout>
+              <Frame x:Name="ItemFrame" Grid.Column="0" BackgroundColor="Transparent"
+                   BorderColor="Gray" CornerRadius="8" Padding="10" Margin="5">
+                <Frame.GestureRecognizers>
+                  <TapGestureRecognizer
+                                      Command="{Binding Source={x:Reference MainPageRoot}, Path=BindingContext.ClickNoteCommand}"
+                                      CommandParameter="{Binding .}" />
+                </Frame.GestureRecognizers>
+                <Frame.Behaviors>
+                  <toolkit:TouchBehavior
+                                        LongPressCommand="{Binding Source={x:Reference MainPageRoot}, Path=BindingContext.LongPressCommand}"
+                                        LongPressCommandParameter="{Binding BindingContext, Source={x:Reference ItemFrame}}"
+                                        LongPressDuration="380"/>
+                </Frame.Behaviors>
 
 
 
-          </Frame>
+                <HorizontalStackLayout Spacing="-90">
+                  <CheckBox IsVisible="{Binding Source={x:Reference MainPageRoot}, Path=BindingContext.SelectionMode}"
+                                IsChecked="{Binding IsSelected, Mode=TwoWay}">
+                    <CheckBox.Triggers>
+                      <DataTrigger TargetType="CheckBox" Binding="{Binding IsSelected}" Value="True">
+                        <Setter Property="BackgroundColor" Value="#384747"/>
+                      </DataTrigger>
+                      <DataTrigger TargetType="CheckBox" Binding="{Binding IsSelected}" Value="False">
+                        <Setter Property="BackgroundColor" Value="Transparent"/>
+                      </DataTrigger>
+                    </CheckBox.Triggers>
+                  </CheckBox>
+                  <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="18"/>
+                </HorizontalStackLayout>
+
+
+
+              </Frame>
+          </VerticalStackLayout>
         </DataTemplate>
       </CollectionView.ItemTemplate>
     </CollectionView>

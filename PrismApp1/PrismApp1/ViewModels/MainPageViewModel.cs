@@ -15,6 +15,7 @@ namespace PrismApp1.ViewModels
         public DelegateCommand AddNoteCommand { get; }
         public DelegateCommand DeleteSelectedCommand { get; }
         public DelegateCommand<NoteItemModel> LongPressCommand { get; }
+        public DelegateCommand UndoSelectionModeCommand { get; }
         public DelegateCommand<NoteItemModel?> ClickNoteCommand { get; }
 
         private bool _selectionMode;
@@ -33,8 +34,18 @@ namespace PrismApp1.ViewModels
             DeleteSelectedCommand = new DelegateCommand(DeleteSelectedNotes);
             ClickNoteCommand = new DelegateCommand<NoteItemModel?>(ClickNote);
             LongPressCommand = new DelegateCommand<NoteItemModel>(LongPressItem);
+            UndoSelectionModeCommand = new DelegateCommand(UndoSelectionMode);
             BoolToColor = new BoolToColorConverter();
             SelectionMode = false;
+        }
+
+        private void UndoSelectionMode()
+        {
+            SelectionMode = false;
+            foreach(var note in Notes)
+            {
+                note.IsSelected = false;
+            }
         }
 
         private async void GoToNoteEditor()

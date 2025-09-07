@@ -56,6 +56,11 @@ appiconWideTile.scale-125.png
 appiconWideTile.scale-150.png
 appiconWideTile.scale-200.png
 appiconWideTile.scale-400.png
+back.xaml.scale-100.png
+back.xaml.scale-125.png
+back.xaml.scale-150.png
+back.xaml.scale-200.png
+back.xaml.scale-400.png
 delete_key.xaml.scale-100.png
 delete_key.xaml.scale-125.png
 delete_key.xaml.scale-150.png

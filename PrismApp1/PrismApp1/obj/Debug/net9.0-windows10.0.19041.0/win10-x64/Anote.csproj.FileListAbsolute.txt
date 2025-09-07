@@ -235,3 +235,8 @@ C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.1904
 C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\back.xaml.scale-400.png
+C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\back.xaml.scale-200.png
+C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\back.xaml.scale-150.png
+C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\back.xaml.scale-125.png
+C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\back.xaml.scale-100.png

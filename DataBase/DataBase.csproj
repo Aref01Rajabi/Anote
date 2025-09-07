@@ -19,6 +19,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="Icons\back.xaml.svg" />
 	  <None Remove="Icons\delete_key.xaml.svg" />
 	  <None Remove="Icons\Menu.xaml.svg" />
 	  <None Remove="Icons\search.xaml.svg" />
@@ -27,6 +28,7 @@
 	<ItemGroup>
 	  <MauiImage Include="Icons\addfolder.xaml.svg" />
 	  <MauiImage Include="Icons\add.xaml.svg" />
+	  <MauiImage Include="Icons\back.xaml.svg" />
 	  <MauiImage Include="Icons\delete_key.xaml.svg" />
 	  <MauiImage Include="Icons\menu.xaml.svg" />
 	  <MauiImage Include="Icons\search.xaml.svg" />
