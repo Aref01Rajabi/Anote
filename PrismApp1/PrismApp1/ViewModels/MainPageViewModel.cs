@@ -1,5 +1,11 @@
-﻿using DataBase.Interfaces;
+﻿using CommunityToolkit.Maui;
+using CommunityToolkit.Maui.Extensions;
+using CommunityToolkit.Maui.Views;
+using DataBase.Interfaces;
 using DataBase.Models;
+using Microsoft.Maui.Controls.Shapes;
+using PrismApp1.PopUps;
+using PrismApp1.Services;
 using System.Collections.ObjectModel;
 
 namespace PrismApp1.ViewModels
@@ -9,14 +15,18 @@ namespace PrismApp1.ViewModels
 
         private readonly INoteService _noteService;
         private readonly INavigationService _navigationService;
+        private readonly IFolderService _folderService;
+        private readonly DialogService _dialogService;
 
-        public BoolToColorConverter BoolToColor;
+        //public BoolToColorConverter BoolToColor;
         public ObservableCollection<NoteItemModel> Notes { get; } = new();
+        public ObservableCollection<FolderModel> Folders { get; } = new();
         public DelegateCommand AddNoteCommand { get; }
         public DelegateCommand DeleteSelectedCommand { get; }
         public DelegateCommand<NoteItemModel> LongPressCommand { get; }
         public DelegateCommand UndoSelectionModeCommand { get; }
         public DelegateCommand<NoteItemModel?> ClickNoteCommand { get; }
+        public DelegateCommand<FolderModel?> AddFolderCommand { get; }
 
         private bool _selectionMode;
         public bool SelectionMode
@@ -26,17 +36,37 @@ namespace PrismApp1.ViewModels
         }
 
 
-        public MainPageViewModel(INavigationService navigationService, INoteService noteService)
+        public MainPageViewModel(INavigationService navigationService, INoteService noteService, IFolderService folderService, DialogService dialogService)
         {
             _navigationService = navigationService;
             _noteService = noteService;
+            _folderService = folderService;
+            _dialogService = dialogService;
             AddNoteCommand = new DelegateCommand(GoToNoteEditor);
             DeleteSelectedCommand = new DelegateCommand(DeleteSelectedNotes);
             ClickNoteCommand = new DelegateCommand<NoteItemModel?>(ClickNote);
             LongPressCommand = new DelegateCommand<NoteItemModel>(LongPressItem);
+            AddFolderCommand = new DelegateCommand<FolderModel?>(AddFolder);
             UndoSelectionModeCommand = new DelegateCommand(UndoSelectionMode);
-            BoolToColor = new BoolToColorConverter();
+            //BoolToColor = new BoolToColorConverter();
             SelectionMode = false;
+        }
+
+        private void AddFolder(FolderModel? model)
+        {
+            this.ShowPopupAsync(new Label
+            {
+                Text = "This is a very important message!"
+            }, new PopupOptions
+            {
+                CanBeDismissedByTappingOutsideOfPopup = false,
+                Shape = new RoundRectangle
+                {
+                    CornerRadius = new CornerRadius(20, 20, 20, 20),
+                    StrokeThickness = 2,
+                    Stroke = Colors.LightGray
+                }
+            });
         }
 
         private void UndoSelectionMode()
@@ -97,6 +127,7 @@ namespace PrismApp1.ViewModels
         public async void OnNavigatedTo(INavigationParameters parameters)
         {
             await LoadNotes();
+            await LoadFolders();
         }
 
         public void OnNavigatedFrom(INavigationParameters parameters) { }
@@ -119,7 +150,25 @@ namespace PrismApp1.ViewModels
             }
         }
 
+        private async Task LoadFolders()
+        {
+            Folders.Clear();
+            var items = await _folderService.GetAllAsync();
 
+            foreach (var folder in items)
+            {
+                Folders.Add(new FolderModel
+                {
+                    Id = folder.Id,
+                    Name = folder.Name,
+                    //NoteIds = folder.NoteIds,
+                    //NoteIdsSerialized = folder.NoteIdsSerialized,
+                    //ChildFolderIds = folder.ChildFolderIds,
+                    //ChildFolderIdsSerialized = folder.ChildFolderIdsSerialized,
+                    ParentFolderId = folder.ParentFolderId
+                });
+            }
+        }
 
     }
 }

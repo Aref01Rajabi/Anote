@@ -339,3 +339,6 @@ C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-ios\iossimulator
 C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-ios\iossimulator-x64\Anote.pdb
 C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-ios\iossimulator-x64\Anote.genruntimeconfig.cache
 C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-ios\iossimulator-x64\ref\Anote.dll
+C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\back.xaml@3x.png
+C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\back.xaml@2x.png
+C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\back.xaml.png

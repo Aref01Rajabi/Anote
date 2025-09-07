@@ -13,6 +13,8 @@ namespace DataBase.Data
         }
 
         public DbSet<NoteModel> Notes { get; set; }
+        public DbSet<FolderModel> Folders { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

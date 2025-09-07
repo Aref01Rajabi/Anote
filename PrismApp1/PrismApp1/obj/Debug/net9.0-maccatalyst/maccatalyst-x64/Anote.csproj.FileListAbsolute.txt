@@ -328,3 +328,6 @@ C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-maccatalyst\macc
 C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Anote.pdb
 C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Anote.genruntimeconfig.cache
 C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\ref\Anote.dll
+C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\back.xaml@3x.png
+C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\back.xaml@2x.png
+C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\back.xaml.png

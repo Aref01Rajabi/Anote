@@ -138,3 +138,8 @@ C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-android\lp\178\j
 C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-android\lp\179\jl\files.cache
 C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-android\lp\180\jl\files.cache
 C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-android\lp\184\jl\files.cache
+C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-android\resizetizer\r\drawable-xxxhdpi\back.xaml.png
+C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-android\resizetizer\r\drawable-xxhdpi\back.xaml.png
+C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-android\resizetizer\r\drawable-xhdpi\back.xaml.png
+C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-android\resizetizer\r\drawable-hdpi\back.xaml.png
+C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-android\resizetizer\r\drawable-mdpi\back.xaml.png

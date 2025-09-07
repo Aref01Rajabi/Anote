@@ -23,5 +23,6 @@ internal static class PrismStartup
         var dbPath = Path.Combine(FileSystem.AppDataDirectory, "notData.db3");
         containerRegistry.RegisterInstance(dbPath);
         containerRegistry.Register<INoteService, NoteService>();
+        containerRegistry.Register<IFolderService, FolderService>();
     }
 }

@@ -30,7 +30,7 @@
     <AppXManifest Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-09-07T07:03:17.017</Modified>
+      <Modified>2025-09-07T10:54:52.160</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -44,15 +44,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Anote.dll">
       <PackagePath>Anote.dll</PackagePath>
-      <Modified>2025-09-07T07:03:14.767</Modified>
+      <Modified>2025-09-07T10:54:49.253</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\DataBase\bin\Debug\net9.0-windows10.0.19041.0\DataBase.dll">
       <PackagePath>DataBase.dll</PackagePath>
-      <Modified>2025-09-07T06:45:22.254</Modified>
+      <Modified>2025-09-07T10:38:16.943</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Anote.exe</PackagePath>
-      <Modified>2025-09-07T07:03:15.503</Modified>
+      <Modified>2025-09-07T10:54:49.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>

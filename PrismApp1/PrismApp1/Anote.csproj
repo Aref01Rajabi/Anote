@@ -30,4 +30,7 @@
 <ItemGroup><ProjectReference Include="..\..\DataBase\DataBase.csproj" /></ItemGroup>
 <ItemGroup><Compile Update="Views\NoteEditorPage.xaml.cs"><DependentUpon>NoteEditorPage.xaml</DependentUpon></Compile></ItemGroup>
 <ItemGroup><MauiXaml Update="Views\NoteEditorPage.xaml"><Generator>MSBuild:Compile</Generator></MauiXaml></ItemGroup>
+<ItemGroup>
+  <Folder Include="PopUps\" />
+</ItemGroup>
 </Project>
