@@ -28,9 +28,10 @@
 <ItemGroup><MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#FFFFFF" /><MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#FFFFFF" /><MauiImage Include="Resources\Images\*" /><MauiFont Include="Resources\Fonts\*" /><MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" /></ItemGroup>
 <ItemGroup><PackageReference Include="CommunityToolkit.Maui" Version="12.1.0" /><PackageReference Include="Microsoft.Maui.Controls" Version="9.0.90" /><PackageReference Include="Prism.DryIoc.Maui" Version="8.1.191-beta" /></ItemGroup>
 <ItemGroup><ProjectReference Include="..\..\DataBase\DataBase.csproj" /></ItemGroup>
-<ItemGroup><Compile Update="Views\NoteEditorPage.xaml.cs"><DependentUpon>NoteEditorPage.xaml</DependentUpon></Compile></ItemGroup>
-<ItemGroup><MauiXaml Update="Views\NoteEditorPage.xaml"><Generator>MSBuild:Compile</Generator></MauiXaml></ItemGroup>
-<ItemGroup>
-  <Folder Include="PopUps\" />
-</ItemGroup>
+<ItemGroup><Compile Update="Views\AddFolderPage.xaml.cs">
+  <DependentUpon>AddFolderPage.xaml</DependentUpon>
+</Compile><Compile Update="Views\NoteEditorPage.xaml.cs"><DependentUpon>NoteEditorPage.xaml</DependentUpon></Compile></ItemGroup>
+<ItemGroup><MauiXaml Update="Views\AddFolderPage.xaml">
+  <Generator>MSBuild:Compile</Generator>
+</MauiXaml><MauiXaml Update="Views\NoteEditorPage.xaml"><Generator>MSBuild:Compile</Generator></MauiXaml></ItemGroup>
 </Project>

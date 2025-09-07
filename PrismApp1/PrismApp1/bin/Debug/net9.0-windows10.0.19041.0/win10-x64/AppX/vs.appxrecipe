@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-09-07T10:54:52.160</Modified>
+      <Modified>2025-09-07T12:34:28.917</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-09-07T06:45:45.860</Modified>
+      <Modified>2025-09-07T12:28:52.057</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Anote.runtimeconfig.json">
       <PackagePath>Anote.runtimeconfig.json</PackagePath>
@@ -44,15 +44,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Anote.dll">
       <PackagePath>Anote.dll</PackagePath>
-      <Modified>2025-09-07T10:54:49.253</Modified>
+      <Modified>2025-09-07T12:34:28.127</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\DataBase\bin\Debug\net9.0-windows10.0.19041.0\DataBase.dll">
       <PackagePath>DataBase.dll</PackagePath>
-      <Modified>2025-09-07T10:38:16.943</Modified>
+      <Modified>2025-09-07T12:09:56.187</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Anote.exe</PackagePath>
-      <Modified>2025-09-07T10:54:49.339</Modified>
+      <Modified>2025-09-07T12:34:28.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -820,7 +820,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Anote.deps.json">
       <PackagePath>Anote.deps.json</PackagePath>
-      <Modified>2025-09-06T18:36:54.602</Modified>
+      <Modified>2025-09-07T12:28:51.085</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\.nuget\packages\microsoft.maui.controls.core\9.0.90\lib\net9.0-windows10.0.19041\Microsoft.Maui.Controls.pri">
       <PackagePath>Microsoft.Maui.Controls.pri</PackagePath>

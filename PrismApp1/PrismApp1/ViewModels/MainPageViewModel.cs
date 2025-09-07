@@ -1,11 +1,8 @@
-﻿using CommunityToolkit.Maui;
-using CommunityToolkit.Maui.Extensions;
-using CommunityToolkit.Maui.Views;
+﻿using CommunityToolkit.Maui.Extensions;
 using DataBase.Interfaces;
 using DataBase.Models;
-using Microsoft.Maui.Controls.Shapes;
-using PrismApp1.PopUps;
-using PrismApp1.Services;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using PrismApp1.Views;
 using System.Collections.ObjectModel;
 
 namespace PrismApp1.ViewModels
@@ -16,7 +13,6 @@ namespace PrismApp1.ViewModels
         private readonly INoteService _noteService;
         private readonly INavigationService _navigationService;
         private readonly IFolderService _folderService;
-        private readonly DialogService _dialogService;
 
         //public BoolToColorConverter BoolToColor;
         public ObservableCollection<NoteItemModel> Notes { get; } = new();
@@ -36,12 +32,11 @@ namespace PrismApp1.ViewModels
         }
 
 
-        public MainPageViewModel(INavigationService navigationService, INoteService noteService, IFolderService folderService, DialogService dialogService)
+        public MainPageViewModel(INavigationService navigationService, INoteService noteService, IFolderService folderService)
         {
             _navigationService = navigationService;
             _noteService = noteService;
             _folderService = folderService;
-            _dialogService = dialogService;
             AddNoteCommand = new DelegateCommand(GoToNoteEditor);
             DeleteSelectedCommand = new DelegateCommand(DeleteSelectedNotes);
             ClickNoteCommand = new DelegateCommand<NoteItemModel?>(ClickNote);
@@ -54,19 +49,8 @@ namespace PrismApp1.ViewModels
 
         private void AddFolder(FolderModel? model)
         {
-            this.ShowPopupAsync(new Label
-            {
-                Text = "This is a very important message!"
-            }, new PopupOptions
-            {
-                CanBeDismissedByTappingOutsideOfPopup = false,
-                Shape = new RoundRectangle
-                {
-                    CornerRadius = new CornerRadius(20, 20, 20, 20),
-                    StrokeThickness = 2,
-                    Stroke = Colors.LightGray
-                }
-            });
+            var popup = new AddFolderPage();
+            Application.Current.MainPage.ShowPopup(popup);
         }
 
         private void UndoSelectionMode()
