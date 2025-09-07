@@ -5,8 +5,14 @@
              x:Name="MainPageRoot"
              xmlns:converters="clr-namespace:PrismApp1.Converters"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:local="clr-namespace:PrismApp1.Converters"
              Title="یادداشت‌ها">
 
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <local:SelectionColorConverter x:Key="BoolToColorConverter"/>
+    </ResourceDictionary>
+  </ContentPage.Resources>
 
   <Grid Padding="5">
     <Grid.RowDefinitions>
@@ -32,22 +38,49 @@
 
       <HorizontalStackLayout Grid.Column="1" HorizontalOptions="End" Margin="0,5,0,5" Spacing="5">
         <ImageButton Source="delete_key.xaml.png"
-             IsVisible="{Binding HasSelection}"
+             IsVisible="{Binding SelectionMode}"
              Command="{Binding DeleteSelectedCommand}"
              BackgroundColor="Transparent"
-             BorderColor="Transparent"
-                     />
+             BorderColor="Transparent"/>
+
         <ImageButton Source="search.xaml.png"
                BackgroundColor="Transparent"
-               BorderColor="Transparent" />
+               BorderColor="Transparent"/>
 
         <ImageButton Source="add.xaml.png"
                BackgroundColor="Transparent"
                BorderColor="Transparent"
-               Command="{Binding AddNoteCommand}" />
+               Command="{Binding AddNoteCommand}">
+          <ImageButton.Triggers>
+            <DataTrigger TargetType="ImageButton"
+           Binding="{Binding SelectionMode}"
+           Value="False">
+              <Setter Property="IsVisible" Value="True"/>
+            </DataTrigger>
+            <DataTrigger TargetType="ImageButton"
+           Binding="{Binding SelectionMode}"
+           Value="True">
+              <Setter Property="IsVisible" Value="False"/>
+            </DataTrigger>
+          </ImageButton.Triggers>
+        </ImageButton>
+
         <ImageButton Source="addfolder.xaml.png"
                BackgroundColor="Transparent"
-               BorderColor="Transparent" />
+               BorderColor="Transparent">
+          <ImageButton.Triggers>
+            <DataTrigger TargetType="ImageButton"
+           Binding="{Binding SelectionMode}"
+           Value="False">
+              <Setter Property="IsVisible" Value="True"/>
+            </DataTrigger>
+            <DataTrigger TargetType="ImageButton"
+           Binding="{Binding SelectionMode}"
+           Value="True">
+              <Setter Property="IsVisible" Value="False"/>
+            </DataTrigger>
+          </ImageButton.Triggers>
+        </ImageButton>
 
         
       </HorizontalStackLayout>
@@ -55,45 +88,43 @@
       
     </Grid>
 
-
-    <CollectionView Grid.Row="1" ItemsSource="{Binding Notes}">
+    <!--Notes-->
+    <CollectionView Grid.Row="1" ItemsSource="{Binding Notes}" >
       <CollectionView.ItemTemplate>
         <DataTemplate>
-          <Frame BackgroundColor="Transparent"
+          <Frame x:Name="ItemFrame" Grid.Column="0" BackgroundColor="Transparent"
                  BorderColor="Gray" CornerRadius="8" Padding="10" Margin="5">
             <Frame.GestureRecognizers>
               <TapGestureRecognizer
-                                    Command="{Binding Source={x:Reference MainPageRoot}, Path=BindingContext.EditNoteCommand}"
+                                    Command="{Binding Source={x:Reference MainPageRoot}, Path=BindingContext.ClickNoteCommand}"
                                     CommandParameter="{Binding .}" />
             </Frame.GestureRecognizers>
+            <Frame.Behaviors>
+              <toolkit:TouchBehavior
+                                      LongPressCommand="{Binding Source={x:Reference MainPageRoot}, Path=BindingContext.LongPressCommand}"
+                                      LongPressCommandParameter="{Binding BindingContext, Source={x:Reference ItemFrame}}"
+                                      LongPressDuration="380"/>
+            </Frame.Behaviors>
 
-            <Grid>
-              <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="*"/>
-              </Grid.ColumnDefinitions>
 
               
-              <VerticalStackLayout Grid.Column="0">
-                <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="18"/>
-                <Label Text="{Binding CreatedAt, StringFormat='{0:yyyy/MM/dd HH:mm}'}"
-                     FontSize="12" TextColor="DarkGray" />
-              </VerticalStackLayout>
-              <Button x:Name="NoteButton"
-                      Grid.Column="1"
-                      WidthRequest="24"
-                      HeightRequest="24"
-                      CornerRadius="12"
-                      BorderColor="Gray"
-                      BorderWidth="1"
-                      BackgroundColor="Transparent"
-                      Margin="2"
-                      HorizontalOptions="End"
-                      VerticalOptions="Center"
-                      Command="{Binding Source={x:Reference MainPageRoot}, Path=BindingContext.ChoosNoteCommand}"
-                      CommandParameter="{x:Reference NoteButton}"/>
+              <HorizontalStackLayout Spacing="-90">
+              <CheckBox IsVisible="{Binding Source={x:Reference MainPageRoot}, Path=BindingContext.SelectionMode}"
+                              IsChecked="{Binding IsSelected, Mode=TwoWay}">
+                <CheckBox.Triggers>
+                  <DataTrigger TargetType="CheckBox" Binding="{Binding IsSelected}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#384747"/>
+                  </DataTrigger>
+                  <DataTrigger TargetType="CheckBox" Binding="{Binding IsSelected}" Value="False">
+                    <Setter Property="BackgroundColor" Value="Transparent"/>
+                  </DataTrigger>
+                </CheckBox.Triggers>
+              </CheckBox>
+              <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="18"/>
+            </HorizontalStackLayout>
 
-            </Grid>
+
+
           </Frame>
         </DataTemplate>
       </CollectionView.ItemTemplate>

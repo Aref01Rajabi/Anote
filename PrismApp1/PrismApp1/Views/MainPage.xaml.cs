@@ -9,15 +9,7 @@ public partial class MainPage : ContentPage
         InitializeComponent();
     }
 
-    protected override async void OnAppearing()
-    {
-        base.OnAppearing();
 
-        if (BindingContext is MainPageViewModel vm)
-        {
-            await vm.LoadNotesPublic();
-        }
-    }
 }
 
 

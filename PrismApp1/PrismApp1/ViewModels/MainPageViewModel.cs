@@ -10,12 +10,19 @@ namespace PrismApp1.ViewModels
         private readonly INoteService _noteService;
         private readonly INavigationService _navigationService;
 
-
-        public ObservableCollection<NoteModel> Notes { get; } = new();
+        public BoolToColorConverter BoolToColor;
+        public ObservableCollection<NoteItemModel> Notes { get; } = new();
         public DelegateCommand AddNoteCommand { get; }
         public DelegateCommand DeleteSelectedCommand { get; }
-        public DelegateCommand<Button> ChoosNoteCommand { get; }
-        public DelegateCommand<NoteModel?> EditNoteCommand { get; }
+        public DelegateCommand<NoteItemModel> LongPressCommand { get; }
+        public DelegateCommand<NoteItemModel?> ClickNoteCommand { get; }
+
+        private bool _selectionMode;
+        public bool SelectionMode
+        {
+            get => _selectionMode;
+            set => SetProperty(ref _selectionMode, value);
+        }
 
 
         public MainPageViewModel(INavigationService navigationService, INoteService noteService)
@@ -24,23 +31,10 @@ namespace PrismApp1.ViewModels
             _noteService = noteService;
             AddNoteCommand = new DelegateCommand(GoToNoteEditor);
             DeleteSelectedCommand = new DelegateCommand(DeleteSelectedNotes);
-            EditNoteCommand = new DelegateCommand<NoteModel?>(GoToEditNote);
-            ChoosNoteCommand = new DelegateCommand<Button>(ChoosNote);
-        }
-
-        private void ChoosNote(Button button)
-        {
-            
-                if (button == null) return;
-
-                var currentColor = button.BackgroundColor;
-
-                var targetColor = Color.FromArgb("#2BFFF1");
-
-                button.BackgroundColor = currentColor == Colors.Transparent
-                    ? targetColor
-                    : Colors.Transparent;
-
+            ClickNoteCommand = new DelegateCommand<NoteItemModel?>(ClickNote);
+            LongPressCommand = new DelegateCommand<NoteItemModel>(LongPressItem);
+            BoolToColor = new BoolToColorConverter();
+            SelectionMode = false;
         }
 
         private async void GoToNoteEditor()
@@ -48,23 +42,46 @@ namespace PrismApp1.ViewModels
             await _navigationService.NavigateAsync("NoteEditorPage");
         }
 
-        private async void GoToEditNote(NoteModel? note)
+        private async void ClickNote(NoteItemModel? note)
         {
-            if (note == null) return;
-
-            var parameters = new NavigationParameters
+            if (!SelectionMode)
             {
-                { "note", note }
-            };
+                if (note == null) return;
+                var noteParameter = new NoteModel { Id = note.Id, Title = note.Title, Content = note.Content, CreatedAt = note.CreatedAt };
+                var parameters = new NavigationParameters
+                {
+                    { "note", noteParameter }
+                };
 
-            await _navigationService.NavigateAsync("NoteEditorPage", parameters);
+                await _navigationService.NavigateAsync("NoteEditorPage", parameters);
+
+            }
+            if (SelectionMode)
+            {
+                Notes.FirstOrDefault(n => n.Id == note.Id).IsSelected = !note.IsSelected; 
+            }
         }
 
         private async void DeleteSelectedNotes()
         {
-
+            foreach(var note in Notes)
+            {
+                if (note.IsSelected)
+                {
+                    _noteService.DeleteAsync(note.Id);
+                }
+            }
+            SelectionMode = false;
+            await LoadNotes();
         }
 
+        public void LongPressItem(NoteItemModel item)
+        {
+            if (!SelectionMode)
+            {
+                SelectionMode = true;
+            }
+        }
 
         public async void OnNavigatedTo(INavigationParameters parameters)
         {
@@ -77,13 +94,20 @@ namespace PrismApp1.ViewModels
         {
             Notes.Clear();
             var items = await _noteService.GetAllAsync();
+
             foreach (var note in items)
-                Notes.Add(note);
+            {
+                Notes.Add(new NoteItemModel
+                {
+                    Id = note.Id,
+                    Title = note.Title,
+                    Content = note.Content,
+                    CreatedAt = note.CreatedAt,
+                    IsSelected = false
+                });
+            }
         }
-        public async Task LoadNotesPublic()
-        {
-            await LoadNotes();
-        }
+
 
 
     }

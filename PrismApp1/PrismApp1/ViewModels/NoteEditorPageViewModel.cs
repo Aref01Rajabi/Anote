@@ -11,7 +11,7 @@ namespace PrismApp1.ViewModels
         private readonly INoteService _noteService;
         private readonly INavigationService _navigationService;
         public NoteModel Note { get; set; }
-        public NoteModel? OriginalNote { get; set; }
+        public NoteModel OriginalNote { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
 
