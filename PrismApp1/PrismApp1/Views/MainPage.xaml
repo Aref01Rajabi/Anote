@@ -17,12 +17,12 @@
   <Grid Padding="5">
     <Grid.RowDefinitions>
       <RowDefinition Height="*"/>
-      <RowDefinition Height="*"/>
-      <RowDefinition Height="15*"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="13*"/>
     </Grid.RowDefinitions>
     
     <!-- menubar -->
-    <Grid  Grid.Row="0">
+    <Grid Grid.Row="0">
 
       
       <Grid.ColumnDefinitions>
@@ -97,55 +97,28 @@
     </Grid>
     
     <!--Folders-->
-    <CollectionView Grid.Row="1"  ItemsSource="{Binding Folders}">
-      <CollectionView.ItemTemplate>
-        <DataTemplate>
-          <VerticalStackLayout>
-            <Label Text="Folders"/>
-            <Frame x:Name="ItemFrame" Grid.Column="0" BackgroundColor="Transparent"
-             BorderColor="Gray" CornerRadius="8" Padding="10" Margin="5">
-              <Frame.GestureRecognizers>
-                <TapGestureRecognizer
-                                Command="{Binding Source={x:Reference MainPageRoot}, Path=BindingContext.ClickNoteCommand}"
-                                CommandParameter="{Binding .}" />
-              </Frame.GestureRecognizers>
-              <Frame.Behaviors>
-                <toolkit:TouchBehavior
-                                  LongPressCommand="{Binding Source={x:Reference MainPageRoot}, Path=BindingContext.LongPressCommand}"
-                                  LongPressCommandParameter="{Binding BindingContext, Source={x:Reference ItemFrame}}"
-                                  LongPressDuration="380"/>
-              </Frame.Behaviors>
+      <FlexLayout Grid.Row="1" Wrap="Wrap" BindableLayout.ItemsSource="{Binding Folders}" HorizontalOptions="Center">
+        <BindableLayout.ItemTemplate>
+          <DataTemplate>
+            <Frame Padding="8" Margin="1" WidthRequest="60" HeightRequest="45" BackgroundColor="Transparent" BorderColor="Gray">
 
-              <HorizontalStackLayout Spacing="-90">
-                <CheckBox IsVisible="{Binding Source={x:Reference MainPageRoot}, Path=BindingContext.SelectionMode}"
-                          IsChecked="{Binding IsSelected, Mode=TwoWay}">
-                  <CheckBox.Triggers>
-                    <DataTrigger TargetType="CheckBox" Binding="{Binding IsSelected}" Value="True">
-                      <Setter Property="BackgroundColor" Value="#384747"/>
-                    </DataTrigger>
-                    <DataTrigger TargetType="CheckBox" Binding="{Binding IsSelected}" Value="False">
-                      <Setter Property="BackgroundColor" Value="Transparent"/>
-                    </DataTrigger>
-                  </CheckBox.Triggers>
-                </CheckBox>
-                <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="18"/>
-              </HorizontalStackLayout>
-
+              <Label Text="{Binding Name}" FontSize="10" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
             </Frame>
-          </VerticalStackLayout>
-        </DataTemplate>
-      </CollectionView.ItemTemplate>
-    </CollectionView>
+          </DataTemplate>
+        </BindableLayout.ItemTemplate>
+      </FlexLayout>
 
-    
+
+
     <!--Notes-->
+    
     <CollectionView Grid.Row="2" ItemsSource="{Binding Notes}">
       <CollectionView.ItemTemplate>
         <DataTemplate>
           <VerticalStackLayout>
 
-              <Frame x:Name="ItemFrame" Grid.Column="0" BackgroundColor="Transparent"
-                   BorderColor="Gray" CornerRadius="8" Padding="10" Margin="5">
+              <Frame x:Name="ItemFrame" BackgroundColor="Transparent"
+                     CornerRadius="8" Padding="10" Margin="-5">
                 <Frame.GestureRecognizers>
                   <TapGestureRecognizer
                                       Command="{Binding Source={x:Reference MainPageRoot}, Path=BindingContext.ClickNoteCommand}"
@@ -178,6 +151,7 @@
 
 
               </Frame>
+            <BoxView HeightRequest="1.5" BackgroundColor="White" HorizontalOptions="Fill" Margin="0,10" Opacity="0.2"/>
           </VerticalStackLayout>
         </DataTemplate>
       </CollectionView.ItemTemplate>

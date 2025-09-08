@@ -14,7 +14,6 @@ namespace PrismApp1.ViewModels
         private readonly INavigationService _navigationService;
         private readonly IFolderService _folderService;
 
-        //public BoolToColorConverter BoolToColor;
         public ObservableCollection<NoteItemModel> Notes { get; } = new();
         public ObservableCollection<FolderModel> Folders { get; } = new();
         public DelegateCommand AddNoteCommand { get; }
@@ -22,7 +21,7 @@ namespace PrismApp1.ViewModels
         public DelegateCommand<NoteItemModel> LongPressCommand { get; }
         public DelegateCommand UndoSelectionModeCommand { get; }
         public DelegateCommand<NoteItemModel?> ClickNoteCommand { get; }
-        public DelegateCommand<FolderModel?> AddFolderCommand { get; }
+        public DelegateCommand AddFolderCommand { get; }
 
         private bool _selectionMode;
         public bool SelectionMode
@@ -41,16 +40,22 @@ namespace PrismApp1.ViewModels
             DeleteSelectedCommand = new DelegateCommand(DeleteSelectedNotes);
             ClickNoteCommand = new DelegateCommand<NoteItemModel?>(ClickNote);
             LongPressCommand = new DelegateCommand<NoteItemModel>(LongPressItem);
-            AddFolderCommand = new DelegateCommand<FolderModel?>(AddFolder);
+            AddFolderCommand = new DelegateCommand(ShowAddFolderAsync);
             UndoSelectionModeCommand = new DelegateCommand(UndoSelectionMode);
-            //BoolToColor = new BoolToColorConverter();
             SelectionMode = false;
         }
 
-        private void AddFolder(FolderModel? model)
+        private async void ShowAddFolderAsync()
         {
-            var popup = new AddFolderPage();
-            Application.Current.MainPage.ShowPopup(popup);
+            var tcs = new TaskCompletionSource<string?>();
+
+            var popup = new AddFolderPage(tcs);
+            await Application.Current.MainPage.ShowPopupAsync(popup);
+
+            var folderName = await tcs.Task;
+
+            _folderService.AddAsync(new FolderModel { Name = folderName, ParentFolderId = 1  });
+            await LoadFolders();
         }
 
         private void UndoSelectionMode()
@@ -141,16 +146,7 @@ namespace PrismApp1.ViewModels
 
             foreach (var folder in items)
             {
-                Folders.Add(new FolderModel
-                {
-                    Id = folder.Id,
-                    Name = folder.Name,
-                    //NoteIds = folder.NoteIds,
-                    //NoteIdsSerialized = folder.NoteIdsSerialized,
-                    //ChildFolderIds = folder.ChildFolderIds,
-                    //ChildFolderIdsSerialized = folder.ChildFolderIdsSerialized,
-                    ParentFolderId = folder.ParentFolderId
-                });
+                Folders.Add(folder);
             }
         }
 
