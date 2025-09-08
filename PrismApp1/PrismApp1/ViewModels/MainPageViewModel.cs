@@ -15,7 +15,6 @@ namespace PrismApp1.ViewModels
         private readonly INavigationService _navigationService;
         private readonly IFolderService _folderService;
 
-        private int? _currentFolderId;
 
         public ObservableCollection<NoteItemModel> Notes { get; } = new();
         public ObservableCollection<FolderModel> Folders { get; } = new();
@@ -23,6 +22,7 @@ namespace PrismApp1.ViewModels
         public DelegateCommand DeleteSelectedCommand { get; }
         public DelegateCommand<NoteItemModel> LongPressCommand { get; }
         public DelegateCommand UndoSelectionModeCommand { get; }
+        public DelegateCommand GoBackFolderCommand { get; }
         public DelegateCommand<NoteItemModel?> ClickNoteCommand { get; }
         public DelegateCommand<FolderModel?> ClickFolderCommand { get; }
         public DelegateCommand AddFolderCommand { get; }
@@ -33,6 +33,18 @@ namespace PrismApp1.ViewModels
             get => _selectionMode;
             set => SetProperty(ref _selectionMode, value);
         }
+        private int? _currentFolderId;
+        public int? CurrentFolderId
+        {
+            get => _currentFolderId;
+            set
+            {
+                SetProperty(ref _currentFolderId, value);
+                RaisePropertyChanged(nameof(IsInSubFolder)); // ← این خط
+            }
+        }
+
+        public bool IsInSubFolder => _currentFolderId != null;
 
 
         public MainPageViewModel(INavigationService navigationService, INoteService noteService, IFolderService folderService)
@@ -46,14 +58,29 @@ namespace PrismApp1.ViewModels
             ClickFolderCommand = new DelegateCommand<FolderModel?>(ClickFolder);
             LongPressCommand = new DelegateCommand<NoteItemModel>(LongPressItem);
             AddFolderCommand = new DelegateCommand(ShowAddFolderAsync);
+            GoBackFolderCommand = new DelegateCommand(GoBackFolder);
             UndoSelectionModeCommand = new DelegateCommand(UndoSelectionMode);
             SelectionMode = false;
             _currentFolderId = null;
         }
 
+        private async void GoBackFolder()
+        {
+            // فولدر فعلی رو بگیر
+            var currentFolder = await _folderService.GetByIdAsync(CurrentFolderId.Value);
+
+            // ParentFolderId رو تنظیم کن
+            CurrentFolderId = currentFolder?.ParentFolderId;
+
+            // فولدرها و نوت‌ها رو دوباره بارگذاری کن
+            await LoadFolders();
+            await LoadNotes();
+        }
+
         private async void ClickFolder(FolderModel? model)
         {
-            _currentFolderId = model.Id;
+            if (model == null) return;
+            CurrentFolderId = model.Id;
             await LoadFolders();
             await LoadNotes();
         }
@@ -72,7 +99,7 @@ namespace PrismApp1.ViewModels
             }
             else
             {
-                _folderService.AddAsync(new FolderModel { Name = folderName, ParentFolderId = _currentFolderId });
+                _folderService.AddAsync(new FolderModel { Name = folderName, ParentFolderId = CurrentFolderId });
             }
             await LoadFolders();
         }
@@ -161,21 +188,10 @@ namespace PrismApp1.ViewModels
         private async Task LoadFolders()
         {
             Folders.Clear();
-            if(_currentFolderId == null)
+            var items = await _folderService.GetByParentIdAsync(CurrentFolderId);
+            foreach (var folder in items)
             {
-                var items = await _folderService.GetAllAsync();
-                foreach (var folder in items)
-                {
-                    Folders.Add(folder);
-                }
-            }
-            else
-            {
-                var items = await _folderService.GetByParentIdAsync(_currentFolderId);
-                foreach (var folder in items)
-                {
-                    Folders.Add(folder);
-                }
+                Folders.Add(folder);
             }
         }
 

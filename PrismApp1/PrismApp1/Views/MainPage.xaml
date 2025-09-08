@@ -37,7 +37,13 @@
       </HorizontalStackLayout>
 
 
-      <HorizontalStackLayout Grid.Column="1" HorizontalOptions="End" Margin="0,5,0,5" Spacing="5">
+      <HorizontalStackLayout Grid.Column="1" HorizontalOptions="End" Margin="0,5,0,5" Spacing="5" >
+        <ImageButton Source="back.xaml.png"
+                     Command="{Binding GoBackFolderCommand}"
+                     IsVisible="{Binding IsInSubFolder}"
+                     BackgroundColor="Transparent"
+                     BorderColor="Transparent"/>
+
         <ImageButton Source="back.xaml.png"
              IsVisible="{Binding SelectionMode}"
              Command="{Binding UndoSelectionModeCommand}"
