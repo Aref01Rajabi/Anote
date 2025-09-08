@@ -10,6 +10,7 @@ namespace PrismApp1.ViewModels
     {
         private readonly INoteService _noteService;
         private readonly INavigationService _navigationService;
+        private int? _folderId;
         public NoteModel Note { get; set; }
         public NoteModel OriginalNote { get; set; }
         public string Title { get; set; }
@@ -35,6 +36,8 @@ namespace PrismApp1.ViewModels
                 RaisePropertyChanged(nameof(Title));
                 RaisePropertyChanged(nameof(Content));
             }
+            if (parameters.ContainsKey("folderId"))
+                _folderId = parameters.GetValue<int?>("folderId");
         }
 
 
@@ -42,7 +45,10 @@ namespace PrismApp1.ViewModels
         {
             if (string.IsNullOrWhiteSpace(Title) && string.IsNullOrWhiteSpace(Content))
             {
-                await _navigationService.NavigateAsync("MainPage");
+                await _navigationService.NavigateAsync("MainPage", new NavigationParameters
+                {
+                    { "folderId", _folderId }
+                });
                 return;
             }
 
@@ -52,7 +58,10 @@ namespace PrismApp1.ViewModels
 
             if (string.IsNullOrWhiteSpace(finalTitle))
             {
-                await _navigationService.NavigateAsync("MainPage");
+                await _navigationService.NavigateAsync("MainPage", new NavigationParameters
+                {
+                    { "folderId", _folderId }
+                });
                 return;
             }
 
@@ -68,13 +77,17 @@ namespace PrismApp1.ViewModels
                 {
                     Title = finalTitle,
                     Content = Content?.Trim(),
+                    FolderId = _folderId,
                     CreatedAt = DateTime.Now
                 };
 
                 await _noteService.AddAsync(newNote);
             }
 
-            await _navigationService.NavigateAsync("MainPage");
+            await _navigationService.NavigateAsync("MainPage", new NavigationParameters
+            {
+                { "folderId", _folderId }
+            });
         }
 
         public void OnNavigatedFrom(INavigationParameters parameters) { }

@@ -115,7 +115,12 @@ namespace PrismApp1.ViewModels
 
         private async void GoToNoteEditor()
         {
-            await _navigationService.NavigateAsync("NoteEditorPage");
+            var parameters = new NavigationParameters
+            {
+                { "folderId", CurrentFolderId }
+            };
+
+            await _navigationService.NavigateAsync("NoteEditorPage", parameters);
         }
 
         private async void ClickNote(NoteItemModel? note)
@@ -161,6 +166,10 @@ namespace PrismApp1.ViewModels
 
         public async void OnNavigatedTo(INavigationParameters parameters)
         {
+            if (parameters.ContainsKey("folderId"))
+            {
+                CurrentFolderId = parameters.GetValue<int?>("folderId");
+            }
             await LoadNotes();
             await LoadFolders();
         }
@@ -170,7 +179,7 @@ namespace PrismApp1.ViewModels
         private async Task LoadNotes()
         {
             Notes.Clear();
-            var items = await _noteService.GetByFolderIdAsync(_currentFolderId);
+            var items = await _noteService.GetByFolderIdAsync(CurrentFolderId);
 
             foreach (var note in items)
             {
