@@ -1,10 +1,9 @@
 ﻿using CommunityToolkit.Maui.Extensions;
 using DataBase.Interfaces;
 using DataBase.Models;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using PrismApp1.Models;
 using PrismApp1.Views;
 using System.Collections.ObjectModel;
-using System.Threading.Tasks;
 
 namespace PrismApp1.ViewModels
 {
@@ -16,15 +15,15 @@ namespace PrismApp1.ViewModels
         private readonly IFolderService _folderService;
 
 
-        public ObservableCollection<NoteItemModel> Notes { get; } = new();
-        public ObservableCollection<FolderModel> Folders { get; } = new();
+        public ObservableCollection<NoteItemeModel> Notes { get; } = new();
+        public ObservableCollection<FolderItemeModel> Folders { get; } = new();
         public DelegateCommand AddNoteCommand { get; }
         public DelegateCommand DeleteSelectedCommand { get; }
-        public DelegateCommand<NoteItemModel> LongPressCommand { get; }
+        public DelegateCommand LongPressCommand { get; }
         public DelegateCommand UndoSelectionModeCommand { get; }
         public DelegateCommand GoBackFolderCommand { get; }
-        public DelegateCommand<NoteItemModel?> ClickNoteCommand { get; }
-        public DelegateCommand<FolderModel?> ClickFolderCommand { get; }
+        public DelegateCommand<NoteItemeModel?> ClickNoteCommand { get; }
+        public DelegateCommand<FolderItemeModel> ClickFolderCommand { get; }
         public DelegateCommand AddFolderCommand { get; }
 
         private bool _selectionMode;
@@ -44,7 +43,7 @@ namespace PrismApp1.ViewModels
             }
         }
 
-        public bool IsInSubFolder => _currentFolderId != null;
+        public bool IsInSubFolder => _currentFolderId != 0;
 
 
         public MainPageViewModel(INavigationService navigationService, INoteService noteService, IFolderService folderService)
@@ -53,36 +52,41 @@ namespace PrismApp1.ViewModels
             _noteService = noteService;
             _folderService = folderService;
             AddNoteCommand = new DelegateCommand(GoToNoteEditor);
-            DeleteSelectedCommand = new DelegateCommand(DeleteSelectedNotes);
-            ClickNoteCommand = new DelegateCommand<NoteItemModel?>(ClickNote);
-            ClickFolderCommand = new DelegateCommand<FolderModel?>(ClickFolder);
-            LongPressCommand = new DelegateCommand<NoteItemModel>(LongPressItem);
+            DeleteSelectedCommand = new DelegateCommand(DeleteSelected);
+            ClickNoteCommand = new DelegateCommand<NoteItemeModel?>(ClickNote);
+            ClickFolderCommand = new DelegateCommand<FolderItemeModel>(ClickFolder);
+            LongPressCommand = new DelegateCommand(LongPressItem);
             AddFolderCommand = new DelegateCommand(ShowAddFolderAsync);
             GoBackFolderCommand = new DelegateCommand(GoBackFolder);
             UndoSelectionModeCommand = new DelegateCommand(UndoSelectionMode);
             SelectionMode = false;
-            _currentFolderId = null;
+            CurrentFolderId = 0;
         }
 
         private async void GoBackFolder()
         {
-            // فولدر فعلی رو بگیر
             var currentFolder = await _folderService.GetByIdAsync(CurrentFolderId.Value);
 
-            // ParentFolderId رو تنظیم کن
             CurrentFolderId = currentFolder?.ParentFolderId;
 
-            // فولدرها و نوت‌ها رو دوباره بارگذاری کن
+            SelectionMode = false;
             await LoadFolders();
             await LoadNotes();
         }
 
-        private async void ClickFolder(FolderModel? model)
+        private async void ClickFolder(FolderItemeModel model)
         {
-            if (model == null) return;
-            CurrentFolderId = model.Id;
-            await LoadFolders();
-            await LoadNotes();
+            if(!SelectionMode)
+            {
+                
+                CurrentFolderId = model.Id;
+                await LoadFolders();
+                await LoadNotes();
+            }
+            else
+            {
+                Folders.FirstOrDefault(n => n.Id == model.Id).IsSelected = !model.IsSelected;
+            }
         }
 
         private async void ShowAddFolderAsync()
@@ -93,9 +97,9 @@ namespace PrismApp1.ViewModels
             await Application.Current.MainPage.ShowPopupAsync(popup);
 
             var folderName = await tcs.Task;
-            if(_currentFolderId == null)
+            if(CurrentFolderId == 0)
             {
-                _folderService.AddAsync(new FolderModel { Name = folderName, ParentFolderId = null });
+                _folderService.AddAsync(new FolderModel { Name = folderName, ParentFolderId = 0 });
             }
             else
             {
@@ -123,11 +127,10 @@ namespace PrismApp1.ViewModels
             await _navigationService.NavigateAsync("NoteEditorPage", parameters);
         }
 
-        private async void ClickNote(NoteItemModel? note)
+        private async void ClickNote(NoteItemeModel? note)
         {
             if (!SelectionMode)
             {
-                if (note == null) return;
                 var noteParameter = new NoteModel { Id = note.Id, Title = note.Title, Content = note.Content, CreatedAt = note.CreatedAt };
                 var parameters = new NavigationParameters
                 {
@@ -137,13 +140,13 @@ namespace PrismApp1.ViewModels
                 await _navigationService.NavigateAsync("NoteEditorPage", parameters);
 
             }
-            if (SelectionMode)
+            else
             {
                 Notes.FirstOrDefault(n => n.Id == note.Id).IsSelected = !note.IsSelected; 
             }
         }
 
-        private async void DeleteSelectedNotes()
+        private async void DeleteSelected()
         {
             foreach(var note in Notes)
             {
@@ -152,11 +155,21 @@ namespace PrismApp1.ViewModels
                     _noteService.DeleteAsync(note.Id);
                 }
             }
+
+            foreach (var folder in Folders)
+            {
+                if (folder.IsSelected)
+                {
+                    _folderService.DeleteAsync(folder.Id);
+                }
+            }
+
             SelectionMode = false;
+            await LoadFolders();
             await LoadNotes();
         }
 
-        public void LongPressItem(NoteItemModel item)
+        public void LongPressItem()
         {
             if (!SelectionMode)
             {
@@ -183,7 +196,7 @@ namespace PrismApp1.ViewModels
 
             foreach (var note in items)
             {
-                Notes.Add(new NoteItemModel
+                Notes.Add(new NoteItemeModel
                 {
                     Id = note.Id,
                     Title = note.Title,
@@ -198,11 +211,19 @@ namespace PrismApp1.ViewModels
         {
             Folders.Clear();
             var items = await _folderService.GetByParentIdAsync(CurrentFolderId);
+
             foreach (var folder in items)
             {
-                Folders.Add(folder);
+                Folders.Add( new FolderItemeModel
+                {
+                    Id = folder.Id,
+                    Name = folder.Name ?? string.Empty,
+                    ParentFolderId = folder.ParentFolderId,
+                    IsSelected = false
+                });
             }
         }
+
 
     }
 }

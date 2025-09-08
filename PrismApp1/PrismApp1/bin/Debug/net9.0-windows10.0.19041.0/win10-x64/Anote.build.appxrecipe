@@ -247,6 +247,21 @@
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\back.xaml.scale-400.png">
       <PackagePath>back.xaml.scale-400.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\close.xaml.scale-100.png">
+      <PackagePath>close.xaml.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\close.xaml.scale-125.png">
+      <PackagePath>close.xaml.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\close.xaml.scale-150.png">
+      <PackagePath>close.xaml.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\close.xaml.scale-200.png">
+      <PackagePath>close.xaml.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\close.xaml.scale-400.png">
+      <PackagePath>close.xaml.scale-400.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete_key.xaml.scale-100.png">
       <PackagePath>delete_key.xaml.scale-100.png</PackagePath>
     </AppxPackagedFile>

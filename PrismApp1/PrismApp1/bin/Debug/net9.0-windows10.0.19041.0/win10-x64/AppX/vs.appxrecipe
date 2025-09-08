@@ -30,29 +30,29 @@
     <AppXManifest Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-09-08T08:58:26.076</Modified>
+      <Modified>2025-09-08T13:36:15.450</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-09-07T12:28:52.057</Modified>
+      <Modified>2025-09-08T12:29:01.504</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Anote.runtimeconfig.json">
       <PackagePath>Anote.runtimeconfig.json</PackagePath>
-      <Modified>2025-09-06T08:10:10.226</Modified>
+      <Modified>2025-09-08T12:29:01.331</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Anote.dll">
       <PackagePath>Anote.dll</PackagePath>
-      <Modified>2025-09-08T08:58:25.555</Modified>
+      <Modified>2025-09-08T13:36:14.330</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\DataBase\bin\Debug\net9.0-windows10.0.19041.0\DataBase.dll">
       <PackagePath>DataBase.dll</PackagePath>
-      <Modified>2025-09-08T07:41:05.750</Modified>
+      <Modified>2025-09-08T13:05:42.260</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Anote.exe</PackagePath>
-      <Modified>2025-09-08T08:58:25.577</Modified>
+      <Modified>2025-09-08T13:36:14.664</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -60,23 +60,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2025-09-06T08:10:06.911</Modified>
+      <Modified>2025-09-08T12:28:54.624</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2025-09-06T08:10:06.932</Modified>
+      <Modified>2025-09-08T12:28:54.639</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2025-09-06T08:10:06.968</Modified>
+      <Modified>2025-09-08T12:28:54.658</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2025-09-06T08:10:07.014</Modified>
+      <Modified>2025-09-08T12:28:54.700</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2025-09-06T08:10:07.146</Modified>
+      <Modified>2025-09-08T12:28:54.829</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -88,327 +88,347 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\add.xaml.scale-100.png">
       <PackagePath>add.xaml.scale-100.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.223</Modified>
+      <Modified>2025-09-08T12:28:55.720</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\add.xaml.scale-125.png">
       <PackagePath>add.xaml.scale-125.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.223</Modified>
+      <Modified>2025-09-08T12:28:55.720</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\add.xaml.scale-150.png">
       <PackagePath>add.xaml.scale-150.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.223</Modified>
+      <Modified>2025-09-08T12:28:55.720</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\add.xaml.scale-200.png">
       <PackagePath>add.xaml.scale-200.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.222</Modified>
+      <Modified>2025-09-08T12:28:55.720</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\add.xaml.scale-400.png">
       <PackagePath>add.xaml.scale-400.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.222</Modified>
+      <Modified>2025-09-08T12:28:55.720</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\addfolder.xaml.scale-100.png">
       <PackagePath>addfolder.xaml.scale-100.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.222</Modified>
+      <Modified>2025-09-08T12:28:55.732</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\addfolder.xaml.scale-125.png">
       <PackagePath>addfolder.xaml.scale-125.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.222</Modified>
+      <Modified>2025-09-08T12:28:55.731</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\addfolder.xaml.scale-150.png">
       <PackagePath>addfolder.xaml.scale-150.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.222</Modified>
+      <Modified>2025-09-08T12:28:55.731</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\addfolder.xaml.scale-200.png">
       <PackagePath>addfolder.xaml.scale-200.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.222</Modified>
+      <Modified>2025-09-08T12:28:55.731</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\addfolder.xaml.scale-400.png">
       <PackagePath>addfolder.xaml.scale-400.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.221</Modified>
+      <Modified>2025-09-08T12:28:55.731</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2025-09-07T06:49:05.236</Modified>
+      <Modified>2025-09-08T12:28:55.729</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.227</Modified>
+      <Modified>2025-09-08T12:28:55.723</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.227</Modified>
+      <Modified>2025-09-08T12:28:55.723</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.226</Modified>
+      <Modified>2025-09-08T12:28:55.723</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.226</Modified>
+      <Modified>2025-09-08T12:28:55.723</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.226</Modified>
+      <Modified>2025-09-08T12:28:55.723</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.232</Modified>
+      <Modified>2025-09-08T12:28:55.727</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.232</Modified>
+      <Modified>2025-09-08T12:28:55.726</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.232</Modified>
+      <Modified>2025-09-08T12:28:55.726</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.232</Modified>
+      <Modified>2025-09-08T12:28:55.726</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.232</Modified>
+      <Modified>2025-09-08T12:28:55.726</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.234</Modified>
+      <Modified>2025-09-08T12:28:55.727</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.233</Modified>
+      <Modified>2025-09-08T12:28:55.727</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.233</Modified>
+      <Modified>2025-09-08T12:28:55.727</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.233</Modified>
+      <Modified>2025-09-08T12:28:55.727</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.233</Modified>
+      <Modified>2025-09-08T12:28:55.727</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.235</Modified>
+      <Modified>2025-09-08T12:28:55.729</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.235</Modified>
+      <Modified>2025-09-08T12:28:55.728</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.235</Modified>
+      <Modified>2025-09-08T12:28:55.728</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.235</Modified>
+      <Modified>2025-09-08T12:28:55.728</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.235</Modified>
+      <Modified>2025-09-08T12:28:55.728</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.235</Modified>
+      <Modified>2025-09-08T12:28:55.728</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.235</Modified>
+      <Modified>2025-09-08T12:28:55.728</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.234</Modified>
+      <Modified>2025-09-08T12:28:55.727</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.234</Modified>
+      <Modified>2025-09-08T12:28:55.728</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.234</Modified>
+      <Modified>2025-09-08T12:28:55.727</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.229</Modified>
+      <Modified>2025-09-08T12:28:55.725</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.229</Modified>
+      <Modified>2025-09-08T12:28:55.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.229</Modified>
+      <Modified>2025-09-08T12:28:55.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.229</Modified>
+      <Modified>2025-09-08T12:28:55.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.229</Modified>
+      <Modified>2025-09-08T12:28:55.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.230</Modified>
+      <Modified>2025-09-08T12:28:55.725</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.230</Modified>
+      <Modified>2025-09-08T12:28:55.725</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.230</Modified>
+      <Modified>2025-09-08T12:28:55.725</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.230</Modified>
+      <Modified>2025-09-08T12:28:55.725</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.230</Modified>
+      <Modified>2025-09-08T12:28:55.725</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.230</Modified>
+      <Modified>2025-09-08T12:28:55.726</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.230</Modified>
+      <Modified>2025-09-08T12:28:55.726</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.230</Modified>
+      <Modified>2025-09-08T12:28:55.726</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.230</Modified>
+      <Modified>2025-09-08T12:28:55.726</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.230</Modified>
+      <Modified>2025-09-08T12:28:55.725</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.229</Modified>
+      <Modified>2025-09-08T12:28:55.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.227</Modified>
+      <Modified>2025-09-08T12:28:55.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.227</Modified>
+      <Modified>2025-09-08T12:28:55.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.227</Modified>
+      <Modified>2025-09-08T12:28:55.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.227</Modified>
+      <Modified>2025-09-08T12:28:55.723</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\back.xaml.scale-100.png">
       <PackagePath>back.xaml.scale-100.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.236</Modified>
+      <Modified>2025-09-08T12:28:55.731</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\back.xaml.scale-125.png">
       <PackagePath>back.xaml.scale-125.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.236</Modified>
+      <Modified>2025-09-08T12:28:55.731</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\back.xaml.scale-150.png">
       <PackagePath>back.xaml.scale-150.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.236</Modified>
+      <Modified>2025-09-08T12:28:55.731</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\back.xaml.scale-200.png">
       <PackagePath>back.xaml.scale-200.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.236</Modified>
+      <Modified>2025-09-08T12:28:55.730</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\back.xaml.scale-400.png">
       <PackagePath>back.xaml.scale-400.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.236</Modified>
+      <Modified>2025-09-08T12:28:55.730</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\close.xaml.scale-100.png">
+      <PackagePath>close.xaml.scale-100.png</PackagePath>
+      <Modified>2025-09-08T12:28:55.730</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\close.xaml.scale-125.png">
+      <PackagePath>close.xaml.scale-125.png</PackagePath>
+      <Modified>2025-09-08T12:28:55.730</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\close.xaml.scale-150.png">
+      <PackagePath>close.xaml.scale-150.png</PackagePath>
+      <Modified>2025-09-08T12:28:55.729</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\close.xaml.scale-200.png">
+      <PackagePath>close.xaml.scale-200.png</PackagePath>
+      <Modified>2025-09-08T12:28:55.729</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\close.xaml.scale-400.png">
+      <PackagePath>close.xaml.scale-400.png</PackagePath>
+      <Modified>2025-09-08T12:28:55.729</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete_key.xaml.scale-100.png">
       <PackagePath>delete_key.xaml.scale-100.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.224</Modified>
+      <Modified>2025-09-08T12:28:55.722</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete_key.xaml.scale-125.png">
       <PackagePath>delete_key.xaml.scale-125.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.223</Modified>
+      <Modified>2025-09-08T12:28:55.722</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete_key.xaml.scale-150.png">
       <PackagePath>delete_key.xaml.scale-150.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.223</Modified>
+      <Modified>2025-09-08T12:28:55.722</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete_key.xaml.scale-200.png">
       <PackagePath>delete_key.xaml.scale-200.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.223</Modified>
+      <Modified>2025-09-08T12:28:55.722</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete_key.xaml.scale-400.png">
       <PackagePath>delete_key.xaml.scale-400.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.223</Modified>
+      <Modified>2025-09-08T12:28:55.721</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\menu.xaml.scale-100.png">
       <PackagePath>menu.xaml.scale-100.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.225</Modified>
+      <Modified>2025-09-08T12:28:55.721</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\menu.xaml.scale-125.png">
       <PackagePath>menu.xaml.scale-125.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.225</Modified>
+      <Modified>2025-09-08T12:28:55.721</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\menu.xaml.scale-150.png">
       <PackagePath>menu.xaml.scale-150.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.224</Modified>
+      <Modified>2025-09-08T12:28:55.721</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\menu.xaml.scale-200.png">
       <PackagePath>menu.xaml.scale-200.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.224</Modified>
+      <Modified>2025-09-08T12:28:55.721</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\menu.xaml.scale-400.png">
       <PackagePath>menu.xaml.scale-400.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.224</Modified>
+      <Modified>2025-09-08T12:28:55.720</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\prism.scale-100.png">
       <PackagePath>prism.scale-100.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.221</Modified>
+      <Modified>2025-09-08T12:28:55.723</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\prism.scale-125.png">
       <PackagePath>prism.scale-125.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.221</Modified>
+      <Modified>2025-09-08T12:28:55.722</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\prism.scale-150.png">
       <PackagePath>prism.scale-150.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.221</Modified>
+      <Modified>2025-09-08T12:28:55.722</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\prism.scale-200.png">
       <PackagePath>prism.scale-200.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.221</Modified>
+      <Modified>2025-09-08T12:28:55.722</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\prism.scale-400.png">
       <PackagePath>prism.scale-400.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.220</Modified>
+      <Modified>2025-09-08T12:28:55.722</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\search.xaml.scale-100.png">
       <PackagePath>search.xaml.scale-100.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.226</Modified>
+      <Modified>2025-09-08T12:28:55.720</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\search.xaml.scale-125.png">
       <PackagePath>search.xaml.scale-125.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.225</Modified>
+      <Modified>2025-09-08T12:28:55.718</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\search.xaml.scale-150.png">
       <PackagePath>search.xaml.scale-150.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.225</Modified>
+      <Modified>2025-09-08T12:28:55.718</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\search.xaml.scale-200.png">
       <PackagePath>search.xaml.scale-200.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.225</Modified>
+      <Modified>2025-09-08T12:28:55.718</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\search.xaml.scale-400.png">
       <PackagePath>search.xaml.scale-400.png</PackagePath>
-      <Modified>2025-09-07T06:49:05.225</Modified>
+      <Modified>2025-09-08T12:28:55.718</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -820,7 +840,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Anote.deps.json">
       <PackagePath>Anote.deps.json</PackagePath>
-      <Modified>2025-09-07T12:28:51.085</Modified>
+      <Modified>2025-09-08T12:29:01.261</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IOS\.nuget\packages\microsoft.maui.controls.core\9.0.90\lib\net9.0-windows10.0.19041\Microsoft.Maui.Controls.pri">
       <PackagePath>Microsoft.Maui.Controls.pri</PackagePath>
