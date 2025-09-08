@@ -11,6 +11,7 @@ namespace DataBase.Interfaces
     {
         Task<List<FolderModel>> GetAllAsync();
         Task<FolderModel?> GetByIdAsync(int id);
+        Task<List<FolderModel>> GetByParentIdAsync(int? parentId);
         Task AddAsync(FolderModel folder);
         Task UpdateAsync(FolderModel folder);
         Task DeleteAsync(int id);

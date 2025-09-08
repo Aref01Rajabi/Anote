@@ -101,8 +101,12 @@
         <BindableLayout.ItemTemplate>
           <DataTemplate>
             <Frame Padding="8" Margin="1" WidthRequest="60" HeightRequest="45" BackgroundColor="Transparent" BorderColor="Gray">
-
-              <Label Text="{Binding Name}" FontSize="10" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Frame.GestureRecognizers>
+              <TapGestureRecognizer
+                                      Command="{Binding Source={x:Reference MainPageRoot}, Path=BindingContext.ClickFolderCommand}"
+                                      CommandParameter="{Binding .}" />
+            </Frame.GestureRecognizers>
+            <Label Text="{Binding Name}" FontSize="10" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
             </Frame>
           </DataTemplate>
         </BindableLayout.ItemTemplate>

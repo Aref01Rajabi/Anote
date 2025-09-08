@@ -28,6 +28,14 @@ namespace DataBase.Services
             return await context.Folders.FindAsync(id);
         }
 
+        public async Task<List<FolderModel>> GetByParentIdAsync(int? parentId)
+        {
+            using var context = new NotesDbContext(_dbPath);
+            return await context.Folders
+                .Where(f => f.ParentFolderId == parentId)
+                .ToListAsync();
+        }
+
         public async Task AddAsync(FolderModel folder)
         {
             using var context = new NotesDbContext(_dbPath);

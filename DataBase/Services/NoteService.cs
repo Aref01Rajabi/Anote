@@ -29,6 +29,14 @@ namespace DataBase.Services
             return await context.Notes.FindAsync(id);
         }
 
+        public async Task<List<NoteModel>> GetByFolderIdAsync(int? folderId)
+        {
+            using var context = new NotesDbContext(_dbPath);
+            return await context.Notes
+                .Where(n => n.FolderId == folderId)
+                .ToListAsync();
+        }
+
         public async Task AddAsync(NoteModel note)
         {
             using var context = new NotesDbContext(_dbPath);

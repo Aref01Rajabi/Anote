@@ -4,6 +4,7 @@ using DataBase.Models;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using PrismApp1.Views;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 
 namespace PrismApp1.ViewModels
 {
@@ -14,6 +15,8 @@ namespace PrismApp1.ViewModels
         private readonly INavigationService _navigationService;
         private readonly IFolderService _folderService;
 
+        private int? _currentFolderId;
+
         public ObservableCollection<NoteItemModel> Notes { get; } = new();
         public ObservableCollection<FolderModel> Folders { get; } = new();
         public DelegateCommand AddNoteCommand { get; }
@@ -21,6 +24,7 @@ namespace PrismApp1.ViewModels
         public DelegateCommand<NoteItemModel> LongPressCommand { get; }
         public DelegateCommand UndoSelectionModeCommand { get; }
         public DelegateCommand<NoteItemModel?> ClickNoteCommand { get; }
+        public DelegateCommand<FolderModel?> ClickFolderCommand { get; }
         public DelegateCommand AddFolderCommand { get; }
 
         private bool _selectionMode;
@@ -39,10 +43,19 @@ namespace PrismApp1.ViewModels
             AddNoteCommand = new DelegateCommand(GoToNoteEditor);
             DeleteSelectedCommand = new DelegateCommand(DeleteSelectedNotes);
             ClickNoteCommand = new DelegateCommand<NoteItemModel?>(ClickNote);
+            ClickFolderCommand = new DelegateCommand<FolderModel?>(ClickFolder);
             LongPressCommand = new DelegateCommand<NoteItemModel>(LongPressItem);
             AddFolderCommand = new DelegateCommand(ShowAddFolderAsync);
             UndoSelectionModeCommand = new DelegateCommand(UndoSelectionMode);
             SelectionMode = false;
+            _currentFolderId = null;
+        }
+
+        private async void ClickFolder(FolderModel? model)
+        {
+            _currentFolderId = model.Id;
+            await LoadFolders();
+            await LoadNotes();
         }
 
         private async void ShowAddFolderAsync()
@@ -53,8 +66,14 @@ namespace PrismApp1.ViewModels
             await Application.Current.MainPage.ShowPopupAsync(popup);
 
             var folderName = await tcs.Task;
-
-            _folderService.AddAsync(new FolderModel { Name = folderName, ParentFolderId = 1  });
+            if(_currentFolderId == null)
+            {
+                _folderService.AddAsync(new FolderModel { Name = folderName, ParentFolderId = null });
+            }
+            else
+            {
+                _folderService.AddAsync(new FolderModel { Name = folderName, ParentFolderId = _currentFolderId });
+            }
             await LoadFolders();
         }
 
@@ -124,7 +143,7 @@ namespace PrismApp1.ViewModels
         private async Task LoadNotes()
         {
             Notes.Clear();
-            var items = await _noteService.GetAllAsync();
+            var items = await _noteService.GetByFolderIdAsync(_currentFolderId);
 
             foreach (var note in items)
             {
@@ -142,11 +161,21 @@ namespace PrismApp1.ViewModels
         private async Task LoadFolders()
         {
             Folders.Clear();
-            var items = await _folderService.GetAllAsync();
-
-            foreach (var folder in items)
+            if(_currentFolderId == null)
             {
-                Folders.Add(folder);
+                var items = await _folderService.GetAllAsync();
+                foreach (var folder in items)
+                {
+                    Folders.Add(folder);
+                }
+            }
+            else
+            {
+                var items = await _folderService.GetByParentIdAsync(_currentFolderId);
+                foreach (var folder in items)
+                {
+                    Folders.Add(folder);
+                }
             }
         }
 
