@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\IOS\\Desktop\\Anote\\DataBase\\DataBase.csproj": {}
+    "D:\\PC\\programm\\C#\\Projects\\Anote\\DataBase\\DataBase.csproj": {}
   },
   "projects": {
-    "C:\\Users\\IOS\\Desktop\\Anote\\DataBase\\DataBase.csproj": {
+    "D:\\PC\\programm\\C#\\Projects\\Anote\\DataBase\\DataBase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\IOS\\Desktop\\Anote\\DataBase\\DataBase.csproj",
+        "projectUniqueName": "D:\\PC\\programm\\C#\\Projects\\Anote\\DataBase\\DataBase.csproj",
         "projectName": "DataBase",
-        "projectPath": "C:\\Users\\IOS\\Desktop\\Anote\\DataBase\\DataBase.csproj",
+        "projectPath": "D:\\PC\\programm\\C#\\Projects\\Anote\\DataBase\\DataBase.csproj",
         "packagesPath": "C:\\Users\\IOS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\IOS\\Desktop\\Anote\\DataBase\\obj\\",
+        "outputPath": "D:\\PC\\programm\\C#\\Projects\\Anote\\DataBase\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

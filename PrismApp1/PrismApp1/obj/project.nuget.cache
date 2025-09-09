@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MhA2BzWBc44=",
+  "dgSpecHash": "8kZdy3pbRAM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\IOS\\Desktop\\Anote\\PrismApp1\\PrismApp1\\Anote.csproj",
+  "projectFilePath": "D:\\PC\\programm\\C#\\Projects\\Anote\\PrismApp1\\PrismApp1\\Anote.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\IOS\\.nuget\\packages\\communitytoolkit.maui\\12.1.0\\communitytoolkit.maui.12.1.0.nupkg.sha512",
     "C:\\Users\\IOS\\.nuget\\packages\\communitytoolkit.maui.core\\12.1.0\\communitytoolkit.maui.core.12.1.0.nupkg.sha512",

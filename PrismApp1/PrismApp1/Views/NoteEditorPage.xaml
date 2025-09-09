@@ -3,11 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PrismApp1.Views.NoteEditorPage"
              Title="NoteEditorPage">
-  <VerticalStackLayout Padding="20" Spacing="15">
-    <Entry Placeholder="عنوان نوت" Text="{Binding Title}" />
-    <Editor Placeholder="متن نوت" HeightRequest="150" Text="{Binding Content}" />
-    <Button Text="ذخیره"
-            Command="{Binding SaveNoteCommand}" />
-  </VerticalStackLayout>
 
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="15*"/>
+    </Grid.RowDefinitions>
+    
+    <Grid Grid.Row="0" Margin="5,5,5,0">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="Auto"/>
+      </Grid.ColumnDefinitions>
+
+      <ImageButton Margin="0,3,5,3" Grid.Column="0" Source="back.xaml.png" Command="{Binding BackCommand}" Background="Transparent" BorderColor="Transparent"/>
+      <Entry InputTransparent="{Binding IsEditable}" Grid.Column="1" Placeholder="عنوان نوت" Text="{Binding Title}" Background="Transparent"/>
+      <ImageButton Margin="3,3,5,0" Grid.Column="2" Source="readmode.xaml.png" Command="{Binding ReadModeCommand}" Background="Transparent" BorderColor="Transparent"/>
+    </Grid>
+
+    
+    <ScrollView Grid.Row="1" >
+      <Editor InputTransparent="{Binding IsEditable}" Placeholder="متن نوت" Text="{Binding Content}" Background="Transparent"/>
+    </ScrollView>
+  </Grid>
 </ContentPage>

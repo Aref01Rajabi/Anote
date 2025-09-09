@@ -1,2 +1,2 @@
-C:\Users\IOS\Desktop\Anote\DataBase\DataBase.csproj;neutral
-C:\Users\IOS\Desktop\Anote\PrismApp1\PrismApp1\Anote.csproj;x64
+D:\PC\programm\C#\Projects\Anote\DataBase\DataBase.csproj;neutral
+D:\PC\programm\C#\Projects\Anote\PrismApp1\PrismApp1\Anote.csproj;x64

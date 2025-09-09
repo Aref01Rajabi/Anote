@@ -39,7 +39,7 @@ namespace PrismApp1.ViewModels
             set
             {
                 SetProperty(ref _currentFolderId, value);
-                RaisePropertyChanged(nameof(IsInSubFolder)); // ← این خط
+                RaisePropertyChanged(nameof(IsInSubFolder));
             }
         }
 
@@ -177,14 +177,14 @@ namespace PrismApp1.ViewModels
             }
         }
 
-        public async void OnNavigatedTo(INavigationParameters parameters)
+        public void OnNavigatedTo(INavigationParameters parameters)
         {
             if (parameters.ContainsKey("folderId"))
             {
                 CurrentFolderId = parameters.GetValue<int?>("folderId");
             }
-            await LoadNotes();
-            await LoadFolders();
+             LoadNotes();
+             LoadFolders();
         }
 
         public void OnNavigatedFrom(INavigationParameters parameters) { }

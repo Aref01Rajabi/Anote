@@ -23,6 +23,7 @@
 	  <None Remove="Icons\close.xaml.svg" />
 	  <None Remove="Icons\delete_key.xaml.svg" />
 	  <None Remove="Icons\Menu.xaml.svg" />
+	  <None Remove="Icons\readmode.xaml.svg" />
 	  <None Remove="Icons\search.xaml.svg" />
 	</ItemGroup>
 
@@ -34,6 +35,10 @@
 	  <MauiImage Include="Icons\delete_key.xaml.svg" />
 	  <MauiImage Include="Icons\menu.xaml.svg" />
 	  <MauiImage Include="Icons\search.xaml.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Icons\readmode.xaml.svg" />
 	</ItemGroup>
 
 	<ItemGroup>

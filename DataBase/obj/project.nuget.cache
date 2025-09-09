@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XXVs9PLF2yQ=",
+  "dgSpecHash": "bxMPjriZ3m0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\IOS\\Desktop\\Anote\\DataBase\\DataBase.csproj",
+  "projectFilePath": "D:\\PC\\programm\\C#\\Projects\\Anote\\DataBase\\DataBase.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\IOS\\.nuget\\packages\\googlegson\\2.13.0.1\\googlegson.2.13.0.1.nupkg.sha512",
     "C:\\Users\\IOS\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.8\\microsoft.data.sqlite.core.9.0.8.nupkg.sha512",

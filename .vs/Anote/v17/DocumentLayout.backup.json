@@ -1,13 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\IOS\\Desktop\\Anote\\",
+  "WorkspaceRootPath": "D:\\PC\\programm\\C#\\Projects\\Anote\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{08B75981-3B26-4202-9979-9E0D58AFA7E7}|PrismApp1\\PrismApp1\\Anote.csproj|c:\\users\\ios\\desktop\\anote\\prismapp1\\prismapp1\\viewmodels\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{08B75981-3B26-4202-9979-9E0D58AFA7E7}|PrismApp1\\PrismApp1\\Anote.csproj|d:\\pc\\programm\\c#\\projects\\anote\\prismapp1\\prismapp1\\viewmodels\\noteeditorpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08B75981-3B26-4202-9979-9E0D58AFA7E7}|PrismApp1\\PrismApp1\\Anote.csproj|solutionrelative:prismapp1\\prismapp1\\viewmodels\\noteeditorpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08B75981-3B26-4202-9979-9E0D58AFA7E7}|PrismApp1\\PrismApp1\\Anote.csproj|d:\\pc\\programm\\c#\\projects\\anote\\prismapp1\\prismapp1\\viewmodels\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{08B75981-3B26-4202-9979-9E0D58AFA7E7}|PrismApp1\\PrismApp1\\Anote.csproj|solutionrelative:prismapp1\\prismapp1\\viewmodels\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08B75981-3B26-4202-9979-9E0D58AFA7E7}|PrismApp1\\PrismApp1\\Anote.csproj|c:\\users\\ios\\desktop\\anote\\prismapp1\\prismapp1\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{08B75981-3B26-4202-9979-9E0D58AFA7E7}|PrismApp1\\PrismApp1\\Anote.csproj|d:\\pc\\programm\\c#\\projects\\anote\\prismapp1\\prismapp1\\views\\noteeditorpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{08B75981-3B26-4202-9979-9E0D58AFA7E7}|PrismApp1\\PrismApp1\\Anote.csproj|solutionrelative:prismapp1\\prismapp1\\views\\noteeditorpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08B75981-3B26-4202-9979-9E0D58AFA7E7}|PrismApp1\\PrismApp1\\Anote.csproj|d:\\pc\\programm\\c#\\projects\\anote\\prismapp1\\prismapp1\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{08B75981-3B26-4202-9979-9E0D58AFA7E7}|PrismApp1\\PrismApp1\\Anote.csproj|solutionrelative:prismapp1\\prismapp1\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -18,19 +26,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\IOS\\Desktop\\Anote\\PrismApp1\\PrismApp1\\Views\\MainPage.xaml",
+              "DocumentMoniker": "D:\\PC\\programm\\C#\\Projects\\Anote\\PrismApp1\\PrismApp1\\Views\\MainPage.xaml",
               "RelativeDocumentMoniker": "PrismApp1\\PrismApp1\\Views\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\IOS\\Desktop\\Anote\\PrismApp1\\PrismApp1\\Views\\MainPage.xaml",
+              "ToolTip": "D:\\PC\\programm\\C#\\Projects\\Anote\\PrismApp1\\PrismApp1\\Views\\MainPage.xaml",
               "RelativeToolTip": "PrismApp1\\PrismApp1\\Views\\MainPage.xaml",
-              "ViewState": "AgIAABkAAAAAAAAAAAAAADQAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAACgAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-09-08T06:36:32.498Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPageViewModel.cs",
+              "DocumentMoniker": "D:\\PC\\programm\\C#\\Projects\\Anote\\PrismApp1\\PrismApp1\\ViewModels\\MainPageViewModel.cs",
+              "RelativeDocumentMoniker": "PrismApp1\\PrismApp1\\ViewModels\\MainPageViewModel.cs",
+              "ToolTip": "D:\\PC\\programm\\C#\\Projects\\Anote\\PrismApp1\\PrismApp1\\ViewModels\\MainPageViewModel.cs",
+              "RelativeToolTip": "PrismApp1\\PrismApp1\\ViewModels\\MainPageViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALMAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-06T05:12:31.23Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -57,15 +78,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainPageViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\IOS\\Desktop\\Anote\\PrismApp1\\PrismApp1\\ViewModels\\MainPageViewModel.cs",
-              "RelativeDocumentMoniker": "PrismApp1\\PrismApp1\\ViewModels\\MainPageViewModel.cs",
-              "ToolTip": "C:\\Users\\IOS\\Desktop\\Anote\\PrismApp1\\PrismApp1\\ViewModels\\MainPageViewModel.cs*",
-              "RelativeToolTip": "PrismApp1\\PrismApp1\\ViewModels\\MainPageViewModel.cs*",
-              "ViewState": "AgIAALUAAAAAAAAAAAAowOAAAAATAAAAAAAAAA==",
+              "Title": "NoteEditorPageViewModel.cs",
+              "DocumentMoniker": "D:\\PC\\programm\\C#\\Projects\\Anote\\PrismApp1\\PrismApp1\\ViewModels\\NoteEditorPageViewModel.cs",
+              "RelativeDocumentMoniker": "PrismApp1\\PrismApp1\\ViewModels\\NoteEditorPageViewModel.cs",
+              "ToolTip": "D:\\PC\\programm\\C#\\Projects\\Anote\\PrismApp1\\PrismApp1\\ViewModels\\NoteEditorPageViewModel.cs*",
+              "RelativeToolTip": "PrismApp1\\PrismApp1\\ViewModels\\NoteEditorPageViewModel.cs*",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA3wCYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T05:12:31.23Z",
+              "WhenOpened": "2025-09-09T05:26:31.964Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NoteEditorPage.xaml",
+              "DocumentMoniker": "D:\\PC\\programm\\C#\\Projects\\Anote\\PrismApp1\\PrismApp1\\Views\\NoteEditorPage.xaml",
+              "RelativeDocumentMoniker": "PrismApp1\\PrismApp1\\Views\\NoteEditorPage.xaml",
+              "ToolTip": "D:\\PC\\programm\\C#\\Projects\\Anote\\PrismApp1\\PrismApp1\\Views\\NoteEditorPage.xaml",
+              "RelativeToolTip": "PrismApp1\\PrismApp1\\Views\\NoteEditorPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-09T05:13:15.116Z"
             }
           ]
         }
