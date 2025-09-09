@@ -49,7 +49,7 @@
               "RelativeDocumentMoniker": "PrismApp1\\PrismApp1\\ViewModels\\MainPageViewModel.cs",
               "ToolTip": "D:\\PC\\programm\\C#\\Projects\\Anote\\PrismApp1\\PrismApp1\\ViewModels\\MainPageViewModel.cs",
               "RelativeToolTip": "PrismApp1\\PrismApp1\\ViewModels\\MainPageViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALMAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-06T05:12:31.23Z",
               "IsPinned": true,
@@ -81,9 +81,9 @@
               "Title": "NoteEditorPageViewModel.cs",
               "DocumentMoniker": "D:\\PC\\programm\\C#\\Projects\\Anote\\PrismApp1\\PrismApp1\\ViewModels\\NoteEditorPageViewModel.cs",
               "RelativeDocumentMoniker": "PrismApp1\\PrismApp1\\ViewModels\\NoteEditorPageViewModel.cs",
-              "ToolTip": "D:\\PC\\programm\\C#\\Projects\\Anote\\PrismApp1\\PrismApp1\\ViewModels\\NoteEditorPageViewModel.cs*",
-              "RelativeToolTip": "PrismApp1\\PrismApp1\\ViewModels\\NoteEditorPageViewModel.cs*",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA3wCYAAAAlAAAAAAAAAA==",
+              "ToolTip": "D:\\PC\\programm\\C#\\Projects\\Anote\\PrismApp1\\PrismApp1\\ViewModels\\NoteEditorPageViewModel.cs",
+              "RelativeToolTip": "PrismApp1\\PrismApp1\\ViewModels\\NoteEditorPageViewModel.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAIwDMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-09T05:26:31.964Z",
               "EditorCaption": ""
@@ -96,9 +96,10 @@
               "RelativeDocumentMoniker": "PrismApp1\\PrismApp1\\Views\\NoteEditorPage.xaml",
               "ToolTip": "D:\\PC\\programm\\C#\\Projects\\Anote\\PrismApp1\\PrismApp1\\Views\\NoteEditorPage.xaml",
               "RelativeToolTip": "PrismApp1\\PrismApp1\\Views\\NoteEditorPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-09T05:13:15.116Z"
+              "WhenOpened": "2025-09-09T05:13:15.116Z",
+              "EditorCaption": ""
             }
           ]
         }

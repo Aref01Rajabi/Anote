@@ -18,13 +18,13 @@
       </Grid.ColumnDefinitions>
 
       <ImageButton Margin="0,3,5,3" Grid.Column="0" Source="back.xaml.png" Command="{Binding BackCommand}" Background="Transparent" BorderColor="Transparent"/>
-      <Entry InputTransparent="{Binding IsEditable}" Grid.Column="1" Placeholder="عنوان نوت" Text="{Binding Title}" Background="Transparent"/>
+      <Entry IsReadOnly="{Binding IsEditable}" Grid.Column="1" Placeholder="عنوان نوت" Text="{Binding Title, Mode=TwoWay}" Background="Transparent"/>
       <ImageButton Margin="3,3,5,0" Grid.Column="2" Source="readmode.xaml.png" Command="{Binding ReadModeCommand}" Background="Transparent" BorderColor="Transparent"/>
     </Grid>
 
     
     <ScrollView Grid.Row="1" >
-      <Editor InputTransparent="{Binding IsEditable}" Placeholder="متن نوت" Text="{Binding Content}" Background="Transparent"/>
+      <Editor IsReadOnly="{Binding IsEditable}" Placeholder="متن نوت" Text="{Binding Content, Mode=TwoWay}" Background="Transparent"/>
     </ScrollView>
   </Grid>
 </ContentPage>
