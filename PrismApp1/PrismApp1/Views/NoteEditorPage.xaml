@@ -3,6 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PrismApp1.Views.NoteEditorPage"
              Title="NoteEditorPage">
+  <ContentPage.Resources>
+    <Style TargetType="Entry" x:Key="BorderlessEntryStyle">
+      <Setter Property="BackgroundColor" Value="Transparent"/>
+      <Setter Property="BorderWidth" Value="0"/>
+      <Setter Property="TextColor" Value="Black"/>
+      <Setter Property="PlaceholderColor" Value="Gray"/>
+      <Setter Property="ControlTemplate">
+        <Setter.Value>
+          <ControlTemplate>
+            <Grid Padding="0" Margin="0">
+              <!-- متن اصلی Entry -->
+              <Entry
+                            Text="{TemplateBinding Text}"
+                            Placeholder="{TemplateBinding Placeholder}"
+                            IsReadOnly="{TemplateBinding IsReadOnly}"
+                            BackgroundColor="Transparent"
+                            BorderWidth="0"
+                            TextColor="Black"
+                            PlaceholderColor="Gray"
+                            VerticalOptions="Center"/>
+            </Grid>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+  </ContentPage.Resources>
 
   <Grid>
     <Grid.RowDefinitions>
@@ -18,7 +44,19 @@
       </Grid.ColumnDefinitions>
 
       <ImageButton Margin="0,3,5,3" Grid.Column="0" Source="back.xaml.png" Command="{Binding BackCommand}" Background="Transparent" BorderColor="Transparent"/>
-      <Entry IsReadOnly="{Binding IsEditable}" Grid.Column="1" Placeholder="عنوان نوت" Text="{Binding Title, Mode=TwoWay}" Background="Transparent"/>
+      <Entry Style="{StaticResource BorderlessEntryStyle}"
+      IsReadOnly="{Binding IsEditable}" 
+      Text="{Binding Title, Mode=TwoWay}" 
+      Placeholder="عنوان نوت"
+      Grid.Column="1"
+      BackgroundColor="Transparent"
+      FontAttributes="Bold"
+      FontSize="20"
+      TextColor="Black"
+      PlaceholderColor="Gray"
+      Margin="10,5"
+      HorizontalTextAlignment="Center"
+      VerticalOptions="Center"/>
       <ImageButton Margin="3,3,5,0" Grid.Column="2" Source="readmode.xaml.png" Command="{Binding ReadModeCommand}" Background="Transparent" BorderColor="Transparent"/>
     </Grid>
 
